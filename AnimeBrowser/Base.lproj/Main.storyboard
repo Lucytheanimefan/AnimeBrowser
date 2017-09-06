@@ -681,15 +681,21 @@
                             <defaultToolbarItems>
                                 <toolbarItem reference="iFz-Tr-cCT"/>
                             </defaultToolbarItems>
+                            <connections>
+                                <outlet property="delegate" destination="B8D-0N-5wS" id="aBI-pE-OfX"/>
+                            </connections>
                         </toolbar>
                     </window>
                     <connections>
+                        <outlet property="browserHeaderView" destination="UA6-dp-OWA" id="QkN-PI-yS2"/>
+                        <outlet property="toolBar" destination="d9K-BX-BJ3" id="SFl-oK-lS0"/>
+                        <outlet property="urlField" destination="81T-XJ-F9b" id="fqF-d6-Bd8"/>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <customView id="UA6-dp-OWA">
-                    <rect key="frame" x="0.0" y="0.0" width="478" height="46"/>
+                    <rect key="frame" x="0.0" y="0.0" width="666" height="46"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
                         <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81T-XJ-F9b">
@@ -700,6 +706,9 @@
                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </textFieldCell>
+                            <connections>
+                                <action selector="submitURLString:" target="B8D-0N-5wS" id="EX6-ee-goF"/>
+                            </connections>
                         </textField>
                     </subviews>
                 </customView>
