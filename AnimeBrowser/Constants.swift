@@ -9,4 +9,4 @@
 import Foundation
 
 
-let googleSearchURL = "/search?client=safari&rls=en&q=google+search+api"
+let googleSearchURL = "https://www.google.com/search?&q="

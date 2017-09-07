@@ -46,10 +46,12 @@ class WindowController: NSWindowController {
     @IBAction func submitURLString(_ sender: NSTextField) {
         // TODO: do this more intelligently
         var string = sender.stringValue
+        var url:URL!
         if (!string.hasPrefix("https://www.") && !string.hasPrefix("http://www.")) {
-            string = "https://www." + string
+            string = googleSearchURL + string.replacingOccurrences(of: " ", with: "-")
         }
-        let url = URL(string: string)
+        print(string)
+        url = URL(string: string)
         if (url != self.urlBackQueue.last){
             self.urlBackQueue.append(url!)
             openURL(url: url!)
