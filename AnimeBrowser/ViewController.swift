@@ -43,6 +43,9 @@ extension ViewController:NSSplitViewDelegate{
         return true
     }
     
+    func splitView(_ splitView: NSSplitView, shouldAdjustSizeOfSubview view: NSView) -> Bool {
+        return true
+    }
 }
 
 extension ViewController: NSTableViewDataSource{

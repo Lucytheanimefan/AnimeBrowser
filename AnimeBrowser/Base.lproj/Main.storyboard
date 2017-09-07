@@ -827,24 +827,23 @@
                                 <rect key="frame" x="0.0" y="0.0" width="822" height="638"/>
                                 <subviews>
                                     <customView id="0IP-hi-Izv">
-                                        <rect key="frame" x="0.0" y="0.0" width="199" height="638"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="235" height="638"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
-                                            <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="100" horizontalPageScroll="10" verticalLineScroll="100" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOy-p9-3FU">
-                                                <rect key="frame" x="0.0" y="0.0" width="199" height="638"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <clipView key="contentView" ambiguous="YES" id="y4d-cX-FsL">
-                                                    <rect key="frame" x="1" y="1" width="197" height="636"/>
+                                            <scrollView autohidesScrollers="YES" horizontalLineScroll="100" horizontalPageScroll="10" verticalLineScroll="100" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOy-p9-3FU">
+                                                <rect key="frame" x="0.0" y="0.0" width="235" height="638"/>
+                                                <clipView key="contentView" id="y4d-cX-FsL">
+                                                    <rect key="frame" x="1" y="1" width="233" height="636"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="98" rowSizeStyle="automatic" viewBased="YES" id="C13-Hk-63o">
-                                                            <rect key="frame" x="0.0" y="0.0" width="197" height="636"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="233" height="636"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <size key="intercellSpacing" width="3" height="2"/>
                                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                             <tableColumns>
-                                                                <tableColumn width="194" minWidth="40" maxWidth="1000" id="WsK-UQ-kQb">
+                                                                <tableColumn width="230" minWidth="40" maxWidth="1000" id="WsK-UQ-kQb">
                                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                                         <font key="font" metaFont="smallSystem"/>
                                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -858,11 +857,11 @@
                                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                     <prototypeCellViews>
                                                                         <tableCellView identifier="webCell" id="rIg-Gx-cXp" customClass="CustomCell" customModule="AnimeBrowser" customModuleProvider="target">
-                                                                            <rect key="frame" x="1" y="1" width="194" height="98"/>
+                                                                            <rect key="frame" x="1" y="1" width="230" height="98"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zm5-sC-paj">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="194" height="98"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="230" height="98"/>
                                                                                     <wkWebViewConfiguration key="configuration">
                                                                                         <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                                                                         <wkPreferences key="preferences"/>
@@ -903,16 +902,20 @@
                                             </scrollView>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="MOy-p9-3FU" secondAttribute="bottom" id="3hp-GE-uac"/>
+                                            <constraint firstAttribute="trailing" secondItem="MOy-p9-3FU" secondAttribute="trailing" id="Fl0-jn-gop"/>
                                             <constraint firstAttribute="width" constant="165" id="N2g-N1-4ht"/>
                                             <constraint firstAttribute="height" constant="638" id="UjC-2E-3ZC"/>
+                                            <constraint firstItem="MOy-p9-3FU" firstAttribute="top" secondItem="0IP-hi-Izv" secondAttribute="top" id="h70-6t-OJq"/>
+                                            <constraint firstItem="MOy-p9-3FU" firstAttribute="leading" secondItem="0IP-hi-Izv" secondAttribute="leading" id="oEc-Fy-wYs"/>
                                         </constraints>
                                     </customView>
                                     <customView id="czw-31-A9w">
-                                        <rect key="frame" x="209" y="0.0" width="613" height="638"/>
+                                        <rect key="frame" x="245" y="0.0" width="577" height="638"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hqb-Kx-i4j">
-                                                <rect key="frame" x="0.0" y="0.0" width="613" height="638"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="577" height="638"/>
                                                 <wkWebViewConfiguration key="configuration">
                                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                                     <wkPreferences key="preferences"/>
