@@ -6,6 +6,17 @@
 //  Copyright © 2017 Lucy Zhang. All rights reserved.
 //
 
+//Anime browser feature requests:
+//- the ability to search series by random descriptors for characters and scenes that I vaguely remember and may actually be completely unrelated to the anime I am thinking of
+//- every 25 phrases, it switches to a random fanboy's really bad rendition of lelouch's voice instead
+//- I guess I would use an anime broswer if it had a lot of integrations?
+//- maybe have a waifu feature that's really just a modified clippy
+//- makes comments about your browsing
+//- Updates on things I'm watching
+//- Easy-access repository of things I have watched
+//- Download option for offline viewing
+//    - Nice icons/library system of organization
+
 import Cocoa
 
 class WindowController: NSWindowController {
@@ -15,7 +26,14 @@ class WindowController: NSWindowController {
     
     @IBOutlet weak var urlField: NSTextField!
     
+    @IBOutlet weak var backButton: NSButton!
+    
+    var urlBackQueue:[URL] = [URL]()
+    var urlForwardQueue:[URL] = [URL]()
+    
     let BrowserHeaderToolbarID = "BrowserHeaderID"
+    
+    let animeSites = ["CrunchyRoll": "http://www.crunchyroll.com/","Funimation": "https://www.funimation.com/", "ANN": "https://www.animenewsnetwork.com", "MAL": "https://www.myanimelist.net", "Reddit": "https://www.reddit.com", "AnimeMaru": "http://www.animemaru.com"]
     
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -26,12 +44,63 @@ class WindowController: NSWindowController {
     }
     
     @IBAction func submitURLString(_ sender: NSTextField) {
-        let url = URL(string: sender.stringValue)
-        if let vc = self.window?.contentViewController as? ViewController{
-            let req = URLRequest(url: url!)
-            vc.mainWebView.load(req)
+        // TODO: do this more intelligently
+        var string = sender.stringValue
+        if (!string.hasPrefix("https://www.") && !string.hasPrefix("http://www.")) {
+            string = "https://www." + string
+        }
+        let url = URL(string: string)
+        if (url != self.urlBackQueue.last){
+            self.urlBackQueue.append(url!)
+            openURL(url: url!)
         }
     }
+    
+    @IBAction func openAnimeSite(_ sender: NSButton) {
+        if let urlString = animeSites[sender.identifier!]{
+            let url = URL(string:urlString)
+            self.urlField.stringValue = urlString
+            openURL(url: url!)
+        }
+        
+    }
+    
+    @IBAction func goBack(_ sender: NSButton) {
+        let url = self.urlBackQueue.removeLast()
+        print("Back url: ")
+        print(url)
+        print(self.urlBackQueue)
+        self.urlField.stringValue = url.absoluteString
+        self.urlForwardQueue.append(url)
+        openURL(url: url)
+    }
+    
+    @IBAction func goForward(_ sender: NSButton) {
+        print("Forward url: ")
+        let url = self.urlForwardQueue.removeLast()
+        print(url)
+        print(self.urlForwardQueue)
+        self.urlField.stringValue = url.absoluteString
+        self.urlBackQueue.append(url)
+        openURL(url: url)
+    }
+    
+    @IBAction func bookButtonAction(_ sender: NSButton) {
+    }
+    
+    
+    func openURL(url:URL){
+        if let vc = self.window?.contentViewController as? ViewController{
+            let req = URLRequest(url: url)
+            print(url)
+            vc.mainWebView.load(req)
+//            while (vc.mainWebView.isLoading){
+//                print("Still loading")
+//            }
+//            print("Done loading!")
+        }
+    }
+    
     
     func customToolbarItem(itemForItemIdentifier itemIdentifier: String, label: String, paletteLabel: String, toolTip: String, target: AnyObject, itemContent: AnyObject, action: Selector?, menu: NSMenu?) -> NSToolbarItem? {
         

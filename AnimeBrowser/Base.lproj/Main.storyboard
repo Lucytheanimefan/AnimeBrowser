@@ -687,6 +687,7 @@
                         </toolbar>
                     </window>
                     <connections>
+                        <outlet property="backButton" destination="lPV-lG-zBk" id="tuB-PE-GbN"/>
                         <outlet property="browserHeaderView" destination="UA6-dp-OWA" id="QkN-PI-yS2"/>
                         <outlet property="toolBar" destination="d9K-BX-BJ3" id="SFl-oK-lS0"/>
                         <outlet property="urlField" destination="81T-XJ-F9b" id="fqF-d6-Bd8"/>
@@ -695,11 +696,11 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <customView id="UA6-dp-OWA">
-                    <rect key="frame" x="0.0" y="0.0" width="666" height="46"/>
+                    <rect key="frame" x="0.0" y="0.0" width="823" height="46"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
                         <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81T-XJ-F9b">
-                            <rect key="frame" x="20" y="12" width="438" height="22"/>
+                            <rect key="frame" x="201" y="12" width="438" height="22"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="2pJ-qq-L2w">
                                 <font key="font" metaFont="system"/>
@@ -710,6 +711,105 @@
                                 <action selector="submitURLString:" target="B8D-0N-5wS" id="EX6-ee-goF"/>
                             </connections>
                         </textField>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lPV-lG-zBk">
+                            <rect key="frame" x="79" y="10" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSLeftFacingTriangleTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hy3-IL-jTb">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="goBack:" target="B8D-0N-5wS" id="IWu-Jj-1UU"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9x8-hL-nBi">
+                            <rect key="frame" x="20" y="10" width="37" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSBookmarksTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VUI-Qb-kah">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="bookButtonAction:" target="B8D-0N-5wS" id="1mt-HQ-f10"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yhe-Cm-72O">
+                            <rect key="frame" x="104" y="10" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSRightFacingTriangleTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="AWz-Ny-kkq">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="goForward:" target="B8D-0N-5wS" id="Zw8-Il-oSz"/>
+                            </connections>
+                        </button>
+                        <button identifier="CrunchyRoll" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HIf-Vk-haD">
+                            <rect key="frame" x="665" y="12" width="21" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="CrunchyRoll" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="n9e-rO-JBe">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="openAnimeSite:" target="B8D-0N-5wS" id="b2L-Mr-QaU"/>
+                            </connections>
+                        </button>
+                        <button identifier="Funimation" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nOe-8Y-W61">
+                            <rect key="frame" x="686" y="10" width="21" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="Funimation" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="BEj-CL-YUN">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="openAnimeSite:" target="B8D-0N-5wS" id="kam-Gy-irn"/>
+                            </connections>
+                        </button>
+                        <button identifier="ANN" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mHk-oq-V8t">
+                            <rect key="frame" x="707" y="10" width="21" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="ANN" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="DoA-1D-DsH">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="openAnimeSite:" target="B8D-0N-5wS" id="TFc-UI-Xj0"/>
+                            </connections>
+                        </button>
+                        <button identifier="MAL" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wLZ-3P-sL1">
+                            <rect key="frame" x="727" y="10" width="21" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="MAL" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="ub3-qc-fgD">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="openAnimeSite:" target="B8D-0N-5wS" id="2sq-mz-DTW"/>
+                            </connections>
+                        </button>
+                        <button identifier="Reddit" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YJH-3h-sHi">
+                            <rect key="frame" x="748" y="10" width="21" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="Reddit" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="tDu-9L-j10">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="openAnimeSite:" target="B8D-0N-5wS" id="msv-5L-BvA"/>
+                            </connections>
+                        </button>
+                        <button identifier="AnimeMaru" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dqz-wq-LqO">
+                            <rect key="frame" x="769" y="10" width="21" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="AnimeMaru" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="538-Tt-dWy">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="openAnimeSite:" target="B8D-0N-5wS" id="gjj-co-fty"/>
+                            </connections>
+                        </button>
                     </subviews>
                 </customView>
             </objects>
@@ -723,18 +823,121 @@
                         <rect key="frame" x="0.0" y="0.0" width="822" height="638"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <wkWebView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hqb-Kx-i4j">
-                                <rect key="frame" x="20" y="15" width="592" height="544"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
+                            <splitView arrangesAllSubviews="NO" dividerStyle="paneSplitter" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yax-EC-O7o">
+                                <rect key="frame" x="0.0" y="0.0" width="822" height="638"/>
+                                <subviews>
+                                    <customView id="0IP-hi-Izv">
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="638"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="90" horizontalPageScroll="10" verticalLineScroll="90" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOy-p9-3FU">
+                                                <rect key="frame" x="0.0" y="0.0" width="165" height="638"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <clipView key="contentView" ambiguous="YES" id="y4d-cX-FsL">
+                                                    <rect key="frame" x="1" y="1" width="163" height="636"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="88" rowSizeStyle="automatic" viewBased="YES" id="C13-Hk-63o">
+                                                            <rect key="frame" x="0.0" y="0.0" width="163" height="636"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <size key="intercellSpacing" width="3" height="2"/>
+                                                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                                            <tableColumns>
+                                                                <tableColumn width="160" minWidth="40" maxWidth="1000" id="WsK-UQ-kQb">
+                                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                                                        <font key="font" metaFont="smallSystem"/>
+                                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                                    </tableHeaderCell>
+                                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="A5K-vc-lDo">
+                                                                        <font key="font" metaFont="system"/>
+                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                                    <prototypeCellViews>
+                                                                        <tableCellView identifier="webCell" id="rIg-Gx-cXp" customClass="CustomCell" customModule="AnimeBrowser" customModuleProvider="target">
+                                                                            <rect key="frame" x="1" y="1" width="160" height="88"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                            <subviews>
+                                                                                <wkWebView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zm5-sC-paj">
+                                                                                    <rect key="frame" x="3" y="3" width="154" height="82"/>
+                                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                                    <wkWebViewConfiguration key="configuration">
+                                                                                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                                                        <wkPreferences key="preferences"/>
+                                                                                    </wkWebViewConfiguration>
+                                                                                </wkWebView>
+                                                                            </subviews>
+                                                                            <connections>
+                                                                                <binding destination="XfG-lQ-9wD" name="hidden" keyPath="self.webView" id="QYB-01-Gbn"/>
+                                                                                <outlet property="webView" destination="zm5-sC-paj" id="giS-fg-4cJ"/>
+                                                                            </connections>
+                                                                        </tableCellView>
+                                                                    </prototypeCellViews>
+                                                                </tableColumn>
+                                                            </tableColumns>
+                                                        </tableView>
+                                                    </subviews>
+                                                </clipView>
+                                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="MAU-1a-Rr2">
+                                                    <rect key="frame" x="1" y="118" width="143" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="U6t-Ok-2US">
+                                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                            </scrollView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="165" id="N2g-N1-4ht"/>
+                                            <constraint firstAttribute="height" constant="638" id="UjC-2E-3ZC"/>
+                                        </constraints>
+                                    </customView>
+                                    <customView id="czw-31-A9w">
+                                        <rect key="frame" x="175" y="0.0" width="647" height="638"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hqb-Kx-i4j">
+                                                <rect key="frame" x="0.0" y="0.0" width="647" height="638"/>
+                                                <wkWebViewConfiguration key="configuration">
+                                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                    <wkPreferences key="preferences"/>
+                                                </wkWebViewConfiguration>
+                                            </wkWebView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Hqb-Kx-i4j" secondAttribute="bottom" id="6Rh-5s-2cK"/>
+                                            <constraint firstAttribute="trailing" secondItem="Hqb-Kx-i4j" secondAttribute="trailing" id="BHQ-S4-Sur"/>
+                                            <constraint firstItem="Hqb-Kx-i4j" firstAttribute="leading" secondItem="czw-31-A9w" secondAttribute="leading" id="Ehy-SB-wll"/>
+                                            <constraint firstItem="Hqb-Kx-i4j" firstAttribute="top" secondItem="czw-31-A9w" secondAttribute="top" id="TeD-7S-Kpb"/>
+                                        </constraints>
+                                    </customView>
+                                </subviews>
+                                <holdingPriorities>
+                                    <real value="250"/>
+                                    <real value="250"/>
+                                </holdingPriorities>
+                                <connections>
+                                    <outlet property="delegate" destination="XfG-lQ-9wD" id="z9C-qy-5B9"/>
+                                </connections>
+                            </splitView>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="yax-EC-O7o" secondAttribute="bottom" id="a6F-Tt-pJP"/>
+                            <constraint firstAttribute="trailing" secondItem="yax-EC-O7o" secondAttribute="trailing" id="kXB-xb-b1n"/>
+                            <constraint firstItem="yax-EC-O7o" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="oUl-Ke-a8I"/>
+                            <constraint firstItem="yax-EC-O7o" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="vSd-JD-bWN"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="leftView" destination="0IP-hi-Izv" id="XFP-0T-YCa"/>
                         <outlet property="mainWebView" destination="Hqb-Kx-i4j" id="Lsx-GK-QBm"/>
+                        <outlet property="rightView" destination="czw-31-A9w" id="PZ9-sM-wGp"/>
+                        <outlet property="splitView" destination="yax-EC-O7o" id="jJi-FN-H4X"/>
+                        <outlet property="tableView" destination="C13-Hk-63o" id="zbx-Se-F6g"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -742,4 +945,15 @@
             <point key="canvasLocation" x="75" y="885"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ANN" width="12" height="12"/>
+        <image name="AnimeMaru" width="50" height="51"/>
+        <image name="CrunchyRoll" width="50" height="49"/>
+        <image name="Funimation" width="50" height="50"/>
+        <image name="MAL" width="50" height="50"/>
+        <image name="NSBookmarksTemplate" width="17" height="18"/>
+        <image name="NSLeftFacingTriangleTemplate" width="9" height="12"/>
+        <image name="NSRightFacingTriangleTemplate" width="9" height="12"/>
+        <image name="Reddit" width="50" height="50"/>
+    </resources>
 </document>
