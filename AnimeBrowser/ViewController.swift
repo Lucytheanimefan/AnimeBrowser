@@ -40,7 +40,7 @@ class ViewController: NSViewController {
 
 extension ViewController:NSSplitViewDelegate{
     func splitView(_ splitView: NSSplitView, canCollapseSubview subview: NSView) -> Bool {
-        return true
+        return (subview.identifier == "leftView")
     }
     
     func splitView(_ splitView: NSSplitView, shouldAdjustSizeOfSubview view: NSView) -> Bool {
