@@ -74,7 +74,7 @@
                   moduleName = "AnimeBrowser"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lucyzhang/Github/AnimeBrowser/AnimeBrowser/WindowController.swift"
-                  timestampString = "526439889.860952"
+                  timestampString = "526443085.485315"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "93"
@@ -89,12 +89,12 @@
                   moduleName = "AnimeBrowser"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lucyzhang/Github/AnimeBrowser/AnimeBrowser/WindowController.swift"
-                  timestampString = "526439889.863314"
+                  timestampString = "526443085.48738"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "93"
                   endingLineNumber = "93"
-                  offsetFromSymbolStart = "352">
+                  offsetFromSymbolStart = "346">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -144,6 +144,38 @@
             startingLineNumber = "50"
             endingLineNumber = "50"
             landmarkName = "submitURLString(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimeBrowser/ViewController.swift"
+            timestampString = "526443024.592164"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "tableView(_:viewFor:row:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimeBrowser/ViewController.swift"
+            timestampString = "526443024.592164"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "tableView(_:viewFor:row:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

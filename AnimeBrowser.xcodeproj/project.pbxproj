@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C3C26AF1F60E36900C16669 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3C26AE1F60E36900C16669 /* Constants.swift */; };
 		7C5049A21F5F94DE00C55B28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5049A11F5F94DE00C55B28 /* AppDelegate.swift */; };
 		7C5049A41F5F94DE00C55B28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5049A31F5F94DE00C55B28 /* ViewController.swift */; };
 		7C5049A61F5F94DE00C55B28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C5049A51F5F94DE00C55B28 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C3C26AE1F60E36900C16669 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7C50499E1F5F94DE00C55B28 /* AnimeBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C5049A11F5F94DE00C55B28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C5049A31F5F94DE00C55B28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				7C5049C51F5F97FD00C55B28 /* WindowController.swift */,
 				7C5049C61F5F97FD00C55B28 /* WindowController.xib */,
 				7C5049C91F60D6FA00C55B28 /* CustomCell.swift */,
+				7C3C26AE1F60E36900C16669 /* Constants.swift */,
 			);
 			path = AnimeBrowser;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C3C26AF1F60E36900C16669 /* Constants.swift in Sources */,
 				7C5049A41F5F94DE00C55B28 /* ViewController.swift in Sources */,
 				7C5049C71F5F97FD00C55B28 /* WindowController.swift in Sources */,
 				7C5049CA1F60D6FA00C55B28 /* CustomCell.swift in Sources */,
@@ -435,6 +439,7 @@
 				7C5049BA1F5F94DE00C55B28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7C5049BB1F5F94DE00C55B28 /* Build configuration list for PBXNativeTarget "AnimeBrowserTests" */ = {
 			isa = XCConfigurationList;
@@ -443,6 +448,7 @@
 				7C5049BD1F5F94DE00C55B28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

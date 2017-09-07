@@ -745,7 +745,7 @@
                             </connections>
                         </button>
                         <button identifier="CrunchyRoll" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HIf-Vk-haD">
-                            <rect key="frame" x="665" y="12" width="21" height="22"/>
+                            <rect key="frame" x="665" y="12" width="21" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="CrunchyRoll" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="n9e-rO-JBe">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -827,24 +827,24 @@
                                 <rect key="frame" x="0.0" y="0.0" width="822" height="638"/>
                                 <subviews>
                                     <customView id="0IP-hi-Izv">
-                                        <rect key="frame" x="0.0" y="0.0" width="165" height="638"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="199" height="638"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
-                                            <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="90" horizontalPageScroll="10" verticalLineScroll="90" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOy-p9-3FU">
-                                                <rect key="frame" x="0.0" y="0.0" width="165" height="638"/>
+                                            <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="100" horizontalPageScroll="10" verticalLineScroll="100" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOy-p9-3FU">
+                                                <rect key="frame" x="0.0" y="0.0" width="199" height="638"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <clipView key="contentView" ambiguous="YES" id="y4d-cX-FsL">
-                                                    <rect key="frame" x="1" y="1" width="163" height="636"/>
+                                                    <rect key="frame" x="1" y="1" width="197" height="636"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="88" rowSizeStyle="automatic" viewBased="YES" id="C13-Hk-63o">
-                                                            <rect key="frame" x="0.0" y="0.0" width="163" height="636"/>
+                                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="98" rowSizeStyle="automatic" viewBased="YES" id="C13-Hk-63o">
+                                                            <rect key="frame" x="0.0" y="0.0" width="197" height="636"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <size key="intercellSpacing" width="3" height="2"/>
                                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                             <tableColumns>
-                                                                <tableColumn width="160" minWidth="40" maxWidth="1000" id="WsK-UQ-kQb">
+                                                                <tableColumn width="194" minWidth="40" maxWidth="1000" id="WsK-UQ-kQb">
                                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                                         <font key="font" metaFont="smallSystem"/>
                                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -858,31 +858,42 @@
                                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                     <prototypeCellViews>
                                                                         <tableCellView identifier="webCell" id="rIg-Gx-cXp" customClass="CustomCell" customModule="AnimeBrowser" customModuleProvider="target">
-                                                                            <rect key="frame" x="1" y="1" width="160" height="88"/>
+                                                                            <rect key="frame" x="1" y="1" width="194" height="98"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
-                                                                                <wkWebView wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zm5-sC-paj">
-                                                                                    <rect key="frame" x="3" y="3" width="154" height="82"/>
-                                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                                <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zm5-sC-paj">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="194" height="98"/>
                                                                                     <wkWebViewConfiguration key="configuration">
                                                                                         <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                                                                         <wkPreferences key="preferences"/>
                                                                                     </wkWebViewConfiguration>
+                                                                                    <connections>
+                                                                                        <binding destination="rIg-Gx-cXp" name="hidden" keyPath="objectValue" id="b0Y-5T-ZAJ"/>
+                                                                                    </connections>
                                                                                 </wkWebView>
                                                                             </subviews>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="bottom" secondItem="zm5-sC-paj" secondAttribute="bottom" id="6pd-i1-0re"/>
+                                                                                <constraint firstItem="zm5-sC-paj" firstAttribute="top" secondItem="rIg-Gx-cXp" secondAttribute="top" id="BTA-1f-Rle"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="zm5-sC-paj" secondAttribute="trailing" id="fUn-sg-Mgy"/>
+                                                                                <constraint firstItem="zm5-sC-paj" firstAttribute="leading" secondItem="rIg-Gx-cXp" secondAttribute="leading" id="o1e-K0-RwB"/>
+                                                                            </constraints>
                                                                             <connections>
-                                                                                <binding destination="XfG-lQ-9wD" name="hidden" keyPath="self.webView" id="QYB-01-Gbn"/>
                                                                                 <outlet property="webView" destination="zm5-sC-paj" id="giS-fg-4cJ"/>
                                                                             </connections>
                                                                         </tableCellView>
                                                                     </prototypeCellViews>
                                                                 </tableColumn>
                                                             </tableColumns>
+                                                            <connections>
+                                                                <outlet property="dataSource" destination="XfG-lQ-9wD" id="Wpd-s7-j3E"/>
+                                                                <outlet property="delegate" destination="XfG-lQ-9wD" id="i2c-Sd-KNf"/>
+                                                            </connections>
                                                         </tableView>
                                                     </subviews>
                                                 </clipView>
                                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="MAU-1a-Rr2">
-                                                    <rect key="frame" x="1" y="118" width="143" height="16"/>
+                                                    <rect key="frame" x="1" y="-15" width="0.0" height="16"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="U6t-Ok-2US">
@@ -897,11 +908,11 @@
                                         </constraints>
                                     </customView>
                                     <customView id="czw-31-A9w">
-                                        <rect key="frame" x="175" y="0.0" width="647" height="638"/>
+                                        <rect key="frame" x="209" y="0.0" width="613" height="638"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hqb-Kx-i4j">
-                                                <rect key="frame" x="0.0" y="0.0" width="647" height="638"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="613" height="638"/>
                                                 <wkWebViewConfiguration key="configuration">
                                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                                     <wkPreferences key="preferences"/>

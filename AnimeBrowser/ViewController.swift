@@ -8,6 +8,7 @@
 
 import Cocoa
 import WebKit
+import Foundation
 
 class ViewController: NSViewController {
 
@@ -44,17 +45,29 @@ extension ViewController:NSSplitViewDelegate{
     
 }
 
-extension ViewController:NSTableViewDelegate, NSTableViewDataSource{
+extension ViewController: NSTableViewDataSource{
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return sideBarResults.count
+        return self.sideBarResults.count
     }
+    
+    func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
+        return 100
+    }
+}
+
+extension ViewController:NSTableViewDelegate{
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let url = sideBarResults[row]
-        let view = CustomCell()
-        let req = URLRequest(url: url)
-        view.webView.load(req)
-        return view
+        if let view = tableView.make(withIdentifier: "webCell", owner: nil) as? CustomCell{
+            let req = URLRequest(url: url)
+            view.webView.load(req)
+            return view
+        }
+        else
+        {
+            return nil
+        }
     }
 
 }
