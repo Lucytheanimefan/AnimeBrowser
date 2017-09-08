@@ -33,7 +33,7 @@ class ViewController: NSViewController {
         setTotoroGIF()
         
         let requester = Requester()
-        requester.makeRequest(endpoint: requester.recentlyAddedAnimeID, parameters: nil, type: "GET") { (data) in
+        requester.makeRequest(endpoint: requester.ratingsID, parameters: nil, type: "GET") { (data) in
             print("Entered completion")
             print(data)
         }
