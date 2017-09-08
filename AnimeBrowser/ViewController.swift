@@ -22,7 +22,7 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var tableView: NSTableView!
     
-    var sideBarResults:[URL]! = [URL(string:"https://www.animenewsnetwork.com")!]
+    var sideBarResults:[URL]! = [URL(string:"https://www.animenewsnetwork.com")!, URL(string:"https://www.myanimelist.net")!]
     
     override func viewDidLoad() {
         super.viewDidLoad()

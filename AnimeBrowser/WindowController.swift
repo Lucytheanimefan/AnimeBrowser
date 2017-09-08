@@ -48,9 +48,10 @@ class WindowController: NSWindowController {
         var string = sender.stringValue
         var url:URL!
         if (!string.hasPrefix("https://www.") && !string.hasPrefix("http://www.")) {
-            string = googleSearchURL + string.replacingOccurrences(of: " ", with: "-")
+            // We must always search about anime!
+            if (!string.contains("anime")){ string = string + " anime" }
+            string = googleSearchURL + string.replacingOccurrences(of: " ", with: "+")
         }
-        print(string)
         url = URL(string: string)
         if (url != self.urlBackQueue.last){
             self.urlBackQueue.append(url!)
