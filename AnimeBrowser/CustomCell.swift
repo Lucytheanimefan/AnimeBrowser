@@ -11,7 +11,7 @@ import WebKit
 
 class CustomCell: NSTableCellView {
     
-    @IBOutlet weak var title: NSTextField!
+    @IBOutlet var titleView: NSTextView!
     
     @IBOutlet weak var subtitle: NSTextField!
     
@@ -23,4 +23,5 @@ class CustomCell: NSTableCellView {
         // Drawing code here.
     }
     
+
 }

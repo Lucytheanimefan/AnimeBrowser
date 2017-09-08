@@ -11,7 +11,7 @@ import WebKit
 import Foundation
 
 class ViewController: NSViewController {
-
+    
     @IBOutlet weak var mainWebView: WKWebView!
     
     @IBOutlet weak var leftView: NSView!
@@ -37,25 +37,18 @@ class ViewController: NSViewController {
         setTotoroGIF()
         
         let requester = Requester()
-        requester.makeRequest(endpoint: requester.recentlyAddedAnimeID, parameters: nil, type: "GET") { (data) in
-            self.count += 1
-            
-            // Don't reload so many times
-            if (self.count % 10 == 0)
-            {
-                print("Entered completion")
-                self.recentlyAddedAnime.append(data)
-                print(data)
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
+        requester.makeRequest(endpoint: Requester.recentlyAddedAnimeID, parameters: nil, type: "GET") { (data) in
+            print("Entered completion")
+            self.recentlyAddedAnime = data
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
         }
     }
-
+    
     override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
+            // Update the view, if already loaded.
         }
     }
     
@@ -75,8 +68,8 @@ class ViewController: NSViewController {
         let advTimeGif = NSImage(data: imageData)
         totoroImageView.image = advTimeGif
     }
-
-
+    
+    
 }
 
 extension ViewController:NSSplitViewDelegate{
@@ -95,7 +88,7 @@ extension ViewController: NSTableViewDataSource{
     }
     
     func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
-        return 100
+        return 90
     }
 }
 
@@ -106,25 +99,24 @@ extension ViewController:NSTableViewDelegate{
         
         if let view = tableView.make(withIdentifier: "webCell", owner: nil) as? CustomCell{
             if let anime = dict["anime"] as? String{
-                view.title.stringValue = anime
+                view.titleView.string = anime
                 return view
             }
-
+            
         }
         return nil
-        
-//        let url = sideBarResults[row]
-//        if let view = tableView.make(withIdentifier: "webCell", owner: nil) as? CustomCell{
-//            let req = URLRequest(url: url)
-//            view.webView.load(req)
-//            return view
-//        }
-//        else
-//        {
-//            return nil
-//        }
     }
-
+    
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        let row = tableView.selectedRow
+        let dict = self.recentlyAddedAnime[row]
+        if let urlString = dict["href"] as? String{
+            let url = URL(string:(Requester.ANN + urlString))!
+            let req = URLRequest(url: url)
+            mainWebView.load(req)
+        }
+    }
+    
 }
 
 

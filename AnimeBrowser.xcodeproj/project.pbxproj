@@ -22,6 +22,7 @@
 		7C5049C71F5F97FD00C55B28 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5049C51F5F97FD00C55B28 /* WindowController.swift */; };
 		7C5049C81F5F97FD00C55B28 /* WindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7C5049C61F5F97FD00C55B28 /* WindowController.xib */; };
 		7C5049CA1F60D6FA00C55B28 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5049C91F60D6FA00C55B28 /* CustomCell.swift */; };
+		7C8204771F62FE410044F033 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8204761F62FE410044F033 /* CustomTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		7C5049C51F5F97FD00C55B28 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
 		7C5049C61F5F97FD00C55B28 /* WindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WindowController.xib; sourceTree = "<group>"; };
 		7C5049C91F60D6FA00C55B28 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		7C8204761F62FE410044F033 /* CustomTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				7C5049C91F60D6FA00C55B28 /* CustomCell.swift */,
 				7C3C26AE1F60E36900C16669 /* Constants.swift */,
 				7C3C26B41F62C52900C16669 /* Requester.swift */,
+				7C8204761F62FE410044F033 /* CustomTextView.swift */,
 			);
 			path = AnimeBrowser;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				7C5049A41F5F94DE00C55B28 /* ViewController.swift in Sources */,
 				7C3C26B51F62C52900C16669 /* Requester.swift in Sources */,
 				7C5049C71F5F97FD00C55B28 /* WindowController.swift in Sources */,
+				7C8204771F62FE410044F033 /* CustomTextView.swift in Sources */,
 				7C5049CA1F60D6FA00C55B28 /* CustomCell.swift in Sources */,
 				7C5049A21F5F94DE00C55B28 /* AppDelegate.swift in Sources */,
 			);
