@@ -867,25 +867,43 @@
                                                                                             <rect key="frame" x="1" y="1" width="327" height="98"/>
                                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                             <subviews>
-                                                                                                <wkWebView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zm5-sC-paj">
-                                                                                                    <rect key="frame" x="0.0" y="0.0" width="327" height="98"/>
-                                                                                                    <wkWebViewConfiguration key="configuration">
-                                                                                                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                                                                                        <wkPreferences key="preferences"/>
-                                                                                                    </wkWebViewConfiguration>
+                                                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtD-nT-Hj5">
+                                                                                                    <rect key="frame" x="108" y="51" width="197" height="33"/>
+                                                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" placeholderString="Title" id="Ir0-8f-auK">
+                                                                                                        <font key="font" metaFont="system"/>
+                                                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                                                    </textFieldCell>
                                                                                                     <connections>
-                                                                                                        <binding destination="rIg-Gx-cXp" name="hidden" keyPath="objectValue" id="b0Y-5T-ZAJ"/>
+                                                                                                        <binding destination="rIg-Gx-cXp" name="hidden" keyPath="objectValue" id="5ZX-ie-Bp8"/>
                                                                                                     </connections>
-                                                                                                </wkWebView>
+                                                                                                </textField>
+                                                                                                <textField verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="es9-QZ-Djs">
+                                                                                                    <rect key="frame" x="110" y="30" width="96" height="22"/>
+                                                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Subtitle" drawsBackground="YES" id="ALc-UK-p8V">
+                                                                                                        <font key="font" metaFont="system"/>
+                                                                                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                                                    </textFieldCell>
+                                                                                                    <connections>
+                                                                                                        <binding destination="rIg-Gx-cXp" name="hidden" keyPath="objectValue" id="Bm0-4l-OXs"/>
+                                                                                                    </connections>
+                                                                                                </textField>
+                                                                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aZy-um-AZV">
+                                                                                                    <rect key="frame" x="12" y="14" width="76" height="70"/>
+                                                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="nzC-NK-74R"/>
+                                                                                                    <connections>
+                                                                                                        <binding destination="rIg-Gx-cXp" name="hidden" keyPath="objectValue" id="QGZ-ir-vR2"/>
+                                                                                                    </connections>
+                                                                                                </imageView>
                                                                                             </subviews>
-                                                                                            <constraints>
-                                                                                                <constraint firstAttribute="bottom" secondItem="zm5-sC-paj" secondAttribute="bottom" id="6pd-i1-0re"/>
-                                                                                                <constraint firstItem="zm5-sC-paj" firstAttribute="top" secondItem="rIg-Gx-cXp" secondAttribute="top" id="BTA-1f-Rle"/>
-                                                                                                <constraint firstAttribute="trailing" secondItem="zm5-sC-paj" secondAttribute="trailing" id="fUn-sg-Mgy"/>
-                                                                                                <constraint firstItem="zm5-sC-paj" firstAttribute="leading" secondItem="rIg-Gx-cXp" secondAttribute="leading" id="o1e-K0-RwB"/>
-                                                                                            </constraints>
                                                                                             <connections>
-                                                                                                <outlet property="webView" destination="zm5-sC-paj" id="giS-fg-4cJ"/>
+                                                                                                <outlet property="iconView" destination="aZy-um-AZV" id="7uS-VJ-iB0"/>
+                                                                                                <outlet property="subtitle" destination="es9-QZ-Djs" id="0Jt-Nx-3CZ"/>
+                                                                                                <outlet property="title" destination="YtD-nT-Hj5" id="Cqd-Ye-0tC"/>
                                                                                             </connections>
                                                                                         </tableCellView>
                                                                                     </prototypeCellViews>

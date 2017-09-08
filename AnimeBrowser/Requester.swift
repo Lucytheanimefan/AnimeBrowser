@@ -68,7 +68,8 @@ extension Requester:XMLParserDelegate{
         
         // Finished 1 chunk of data, time to do something with it
         if (elementName == "item"){
-            os_log("%@: CHUNK: %@", self.className, xmlChunk)
+            //os_log("%@: CHUNK: %@", self.className, xmlChunk)
+            self.completion(xmlChunk)
             xmlChunk = [String:Any]()
         }
     }

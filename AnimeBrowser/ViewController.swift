@@ -26,18 +26,31 @@ class ViewController: NSViewController {
     
     @IBOutlet var totoroTextView: NSTextView!
     
+    var recentlyAddedAnime:[[String:Any]]! = [[String:Any]]()
+    
     var sideBarResults:[URL]! = [URL(string:"https://www.animenewsnetwork.com")!, URL(string:"https://www.myanimelist.net")!]
+    
+    var count:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setTotoroGIF()
         
         let requester = Requester()
-        requester.makeRequest(endpoint: requester.ratingsID, parameters: nil, type: "GET") { (data) in
-            print("Entered completion")
-            print(data)
+        requester.makeRequest(endpoint: requester.recentlyAddedAnimeID, parameters: nil, type: "GET") { (data) in
+            self.count += 1
+            
+            // Don't reload so many times
+            if (self.count % 10 == 0)
+            {
+                print("Entered completion")
+                self.recentlyAddedAnime.append(data)
+                print(data)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
         }
-
     }
 
     override var representedObject: Any? {
@@ -78,7 +91,7 @@ extension ViewController:NSSplitViewDelegate{
 
 extension ViewController: NSTableViewDataSource{
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return self.sideBarResults.count
+        return self.recentlyAddedAnime.count
     }
     
     func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
@@ -89,16 +102,27 @@ extension ViewController: NSTableViewDataSource{
 extension ViewController:NSTableViewDelegate{
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let url = sideBarResults[row]
+        let dict = self.recentlyAddedAnime[row]
+        
         if let view = tableView.make(withIdentifier: "webCell", owner: nil) as? CustomCell{
-            let req = URLRequest(url: url)
-            view.webView.load(req)
-            return view
+            if let anime = dict["anime"] as? String{
+                view.title.stringValue = anime
+                return view
+            }
+
         }
-        else
-        {
-            return nil
-        }
+        return nil
+        
+//        let url = sideBarResults[row]
+//        if let view = tableView.make(withIdentifier: "webCell", owner: nil) as? CustomCell{
+//            let req = URLRequest(url: url)
+//            view.webView.load(req)
+//            return view
+//        }
+//        else
+//        {
+//            return nil
+//        }
     }
 
 }
