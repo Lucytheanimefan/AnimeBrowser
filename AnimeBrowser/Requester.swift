@@ -55,6 +55,7 @@ extension Requester:XMLParserDelegate{
     
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         xmlElementName = elementName
+        xmlChunk[xmlElementName] = ""
         if let url = attributeDict["href"]{
             xmlChunk["href"] = url
         }
@@ -64,14 +65,16 @@ extension Requester:XMLParserDelegate{
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         //os_log("%@: %@ : %@", self.className, xmlElementName, string)
-
-        xmlChunk[xmlElementName] = string
+        print(string)
+        if (xmlElementName == "anime"){
+            xmlChunk[xmlElementName] = xmlChunk[xmlElementName] as! String + string
+        }
     }
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         
         if (elementName == "item"){
-            print("append to chunks")
+            //print("append to chunks")
             // append the chunk
             xmlChunks.append(xmlChunk)
         }

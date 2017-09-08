@@ -856,13 +856,13 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="332" height="404"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <scrollView autohidesScrollers="YES" horizontalLineScroll="69" horizontalPageScroll="10" verticalLineScroll="69" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOy-p9-3FU">
+                                                            <scrollView autohidesScrollers="YES" horizontalLineScroll="51" horizontalPageScroll="10" verticalLineScroll="51" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOy-p9-3FU">
                                                                 <rect key="frame" x="0.0" y="0.0" width="332" height="404"/>
                                                                 <clipView key="contentView" id="y4d-cX-FsL">
                                                                     <rect key="frame" x="1" y="1" width="330" height="402"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
-                                                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="67" rowSizeStyle="automatic" viewBased="YES" id="C13-Hk-63o">
+                                                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="49" rowSizeStyle="automatic" viewBased="YES" id="C13-Hk-63o">
                                                                             <rect key="frame" x="0.0" y="0.0" width="330" height="402"/>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -883,20 +883,20 @@
                                                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                                     <prototypeCellViews>
                                                                                         <tableCellView identifier="webCell" id="rIg-Gx-cXp" customClass="CustomCell" customModule="AnimeBrowser" customModuleProvider="target">
-                                                                                            <rect key="frame" x="1" y="1" width="327" height="67"/>
+                                                                                            <rect key="frame" x="1" y="1" width="327" height="49"/>
                                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                             <subviews>
                                                                                                 <scrollView wantsLayer="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="psH-JC-ONx">
-                                                                                                    <rect key="frame" x="15" y="25" width="309" height="28"/>
+                                                                                                    <rect key="frame" x="15" y="22" width="309" height="19"/>
                                                                                                     <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="Md7-zi-XgN">
-                                                                                                        <rect key="frame" x="0.0" y="0.0" width="309" height="28"/>
+                                                                                                        <rect key="frame" x="0.0" y="0.0" width="309" height="19"/>
                                                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                                         <subviews>
                                                                                                             <textView editable="NO" selectable="NO" drawsBackground="NO" importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="C18-q6-SPD" customClass="CustomTextView" customModule="AnimeBrowser" customModuleProvider="target">
-                                                                                                                <rect key="frame" x="0.0" y="-1" width="309" height="28"/>
+                                                                                                                <rect key="frame" x="0.0" y="-1" width="309" height="19"/>
                                                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                                                                <size key="minSize" width="309" height="28"/>
+                                                                                                                <size key="minSize" width="309" height="10"/>
                                                                                                                 <size key="maxSize" width="463" height="10000000"/>
                                                                                                                 <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                                                 <connections>
@@ -911,13 +911,13 @@
                                                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                                                     </scroller>
                                                                                                     <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="st0-vJ-JYh">
-                                                                                                        <rect key="frame" x="293" y="0.0" width="16" height="28"/>
+                                                                                                        <rect key="frame" x="293" y="0.0" width="16" height="19"/>
                                                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                                                     </scroller>
                                                                                                 </scrollView>
                                                                                                 <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="es9-QZ-Djs">
-                                                                                                    <rect key="frame" x="13" y="13" width="313" height="13"/>
-                                                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" placeholderString="Subtitle" id="ALc-UK-p8V">
+                                                                                                    <rect key="frame" x="13" y="9" width="313" height="13"/>
+                                                                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" state="on" placeholderString="Subtitle" id="ALc-UK-p8V">
                                                                                                         <font key="font" metaFont="label"/>
                                                                                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -929,11 +929,11 @@
                                                                                             </subviews>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="trailing" secondItem="es9-QZ-Djs" secondAttribute="trailing" constant="3" id="0K1-Kk-AyW"/>
-                                                                                                <constraint firstItem="es9-QZ-Djs" firstAttribute="top" secondItem="psH-JC-ONx" secondAttribute="bottom" constant="-1" id="1hb-ga-Psx"/>
+                                                                                                <constraint firstItem="es9-QZ-Djs" firstAttribute="top" secondItem="psH-JC-ONx" secondAttribute="bottom" id="1hb-ga-Psx"/>
+                                                                                                <constraint firstItem="psH-JC-ONx" firstAttribute="top" secondItem="rIg-Gx-cXp" secondAttribute="top" constant="8" id="2Uo-Hr-ZvT"/>
                                                                                                 <constraint firstItem="es9-QZ-Djs" firstAttribute="leading" secondItem="psH-JC-ONx" secondAttribute="leading" id="2WI-KR-xYW"/>
-                                                                                                <constraint firstItem="psH-JC-ONx" firstAttribute="top" secondItem="rIg-Gx-cXp" secondAttribute="top" constant="14" id="3vJ-el-aLm"/>
+                                                                                                <constraint firstAttribute="bottom" secondItem="es9-QZ-Djs" secondAttribute="bottom" constant="9" id="3EB-CK-81D"/>
                                                                                                 <constraint firstAttribute="trailing" secondItem="psH-JC-ONx" secondAttribute="trailing" constant="3" id="4us-hx-Y1c"/>
-                                                                                                <constraint firstAttribute="bottom" secondItem="es9-QZ-Djs" secondAttribute="bottom" constant="13" id="FoP-hs-Xfl"/>
                                                                                                 <constraint firstAttribute="trailing" secondItem="psH-JC-ONx" secondAttribute="trailing" constant="3" id="MpG-pW-7pI"/>
                                                                                                 <constraint firstAttribute="trailing" secondItem="psH-JC-ONx" secondAttribute="trailing" constant="3" id="QqC-N2-iLb"/>
                                                                                                 <constraint firstItem="psH-JC-ONx" firstAttribute="leading" secondItem="rIg-Gx-cXp" secondAttribute="leading" constant="15" id="d1H-3y-HIT"/>

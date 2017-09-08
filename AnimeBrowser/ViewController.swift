@@ -88,8 +88,9 @@ extension ViewController: NSTableViewDataSource{
     }
     
     func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
-        return 90
+        return 50
     }
+    
 }
 
 extension ViewController:NSTableViewDelegate{
@@ -99,6 +100,7 @@ extension ViewController:NSTableViewDelegate{
         
         if let view = tableView.make(withIdentifier: "webCell", owner: nil) as? CustomCell{
             if let anime = dict["anime"] as? String{
+                //print(anime)
                 view.titleView.string = anime
                 return view
             }
@@ -114,6 +116,12 @@ extension ViewController:NSTableViewDelegate{
             let url = URL(string:(Requester.ANN + urlString))!
             let req = URLRequest(url: url)
             mainWebView.load(req)
+        }
+    }
+    
+    func tableView(_ tableView: NSTableView, willDisplayCell cell: Any, for tableColumn: NSTableColumn?, row: Int) {
+        if (tableView.selectedRow == row){
+            
         }
     }
     
