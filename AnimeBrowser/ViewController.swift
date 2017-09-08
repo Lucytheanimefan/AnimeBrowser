@@ -22,10 +22,15 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var tableView: NSTableView!
     
+    @IBOutlet weak var totoroImageView: NSImageView!
+    
+    
     var sideBarResults:[URL]! = [URL(string:"https://www.animenewsnetwork.com")!, URL(string:"https://www.myanimelist.net")!]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTotoroGIF()
+        
 
     }
 
@@ -33,6 +38,21 @@ class ViewController: NSViewController {
         didSet {
         // Update the view, if already loaded.
         }
+    }
+    
+    func setTotoroGIF(){
+        var imageData:Data!
+        print(Bundle.main.bundleURL)
+        do{
+            imageData = try Data(contentsOf: Bundle.main.url(forResource: "totoroWalking", withExtension: "gif")!)
+        }
+        catch {
+            print(error)
+            return
+        }
+        totoroImageView.animates = true
+        let advTimeGif = NSImage(data: imageData)
+        totoroImageView.image = advTimeGif
     }
 
 

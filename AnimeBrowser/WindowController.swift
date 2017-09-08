@@ -65,7 +65,6 @@ class WindowController: NSWindowController {
             self.urlField.stringValue = urlString
             openURL(url: url!)
         }
-        
     }
     
     @IBAction func goBack(_ sender: NSButton) {

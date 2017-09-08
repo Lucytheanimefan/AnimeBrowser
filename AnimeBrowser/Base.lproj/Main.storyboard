@@ -984,6 +984,7 @@
                         <outlet property="rightView" destination="czw-31-A9w" id="PZ9-sM-wGp"/>
                         <outlet property="splitView" destination="yax-EC-O7o" id="jJi-FN-H4X"/>
                         <outlet property="tableView" destination="C13-Hk-63o" id="zbx-Se-F6g"/>
+                        <outlet property="totoroImageView" destination="NYi-J5-odr" id="nI1-N4-6Yd"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
