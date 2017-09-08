@@ -899,7 +899,7 @@
                                                                     </subviews>
                                                                 </clipView>
                                                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="MAU-1a-Rr2">
-                                                                    <rect key="frame" x="1" y="290" width="227" height="16"/>
+                                                                    <rect key="frame" x="1" y="387" width="0.0" height="16"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                 </scroller>
                                                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="U6t-Ok-2US">
@@ -919,10 +919,37 @@
                                                         <rect key="frame" x="0.0" y="414" width="235" height="224"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NYi-J5-odr">
-                                                                <rect key="frame" x="0.0" y="59" width="235" height="165"/>
+                                                            <scrollView wantsLayer="YES" fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSM-Tc-euc">
+                                                                <rect key="frame" x="0.0" y="0.0" width="235" height="64"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="KQw-d2-cIs">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="235" height="64"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    <subviews>
+                                                                        <textView ambiguous="YES" editable="NO" drawsBackground="NO" importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="i32-R2-Ape">
+                                                                            <rect key="frame" x="0.0" y="-0.5" width="235" height="64"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <size key="minSize" width="235" height="64"/>
+                                                                            <size key="maxSize" width="463" height="10000000"/>
+                                                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        </textView>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </clipView>
+                                                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="9BS-dL-1aM">
+                                                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                </scroller>
+                                                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="eKw-el-eet">
+                                                                    <rect key="frame" x="219" y="0.0" width="16" height="64"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                </scroller>
+                                                            </scrollView>
+                                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="USn-o3-s55">
+                                                                <rect key="frame" x="0.0" y="125" width="235" height="99"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="3fg-v3-UQA"/>
+                                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" id="dGn-bJ-Swd"/>
                                                             </imageView>
                                                         </subviews>
                                                     </customView>
@@ -984,7 +1011,8 @@
                         <outlet property="rightView" destination="czw-31-A9w" id="PZ9-sM-wGp"/>
                         <outlet property="splitView" destination="yax-EC-O7o" id="jJi-FN-H4X"/>
                         <outlet property="tableView" destination="C13-Hk-63o" id="zbx-Se-F6g"/>
-                        <outlet property="totoroImageView" destination="NYi-J5-odr" id="nI1-N4-6Yd"/>
+                        <outlet property="totoroImageView" destination="USn-o3-s55" id="HeX-CR-zor"/>
+                        <outlet property="totoroTextView" destination="i32-R2-Ape" id="gmn-zR-WtU"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

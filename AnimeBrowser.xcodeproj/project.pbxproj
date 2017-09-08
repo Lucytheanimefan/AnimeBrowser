@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7C3C26AF1F60E36900C16669 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3C26AE1F60E36900C16669 /* Constants.swift */; };
 		7C3C26B11F623AE700C16669 /* totoroWalking.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7C3C26B01F623AE700C16669 /* totoroWalking.gif */; };
+		7C3C26B31F62423900C16669 /* totoro_transparent.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7C3C26B21F62423900C16669 /* totoro_transparent.gif */; };
 		7C5049A21F5F94DE00C55B28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5049A11F5F94DE00C55B28 /* AppDelegate.swift */; };
 		7C5049A41F5F94DE00C55B28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5049A31F5F94DE00C55B28 /* ViewController.swift */; };
 		7C5049A61F5F94DE00C55B28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C5049A51F5F94DE00C55B28 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		7C3C26AE1F60E36900C16669 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7C3C26B01F623AE700C16669 /* totoroWalking.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = totoroWalking.gif; sourceTree = "<group>"; };
+		7C3C26B21F62423900C16669 /* totoro_transparent.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = totoro_transparent.gif; sourceTree = "<group>"; };
 		7C50499E1F5F94DE00C55B28 /* AnimeBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimeBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C5049A11F5F94DE00C55B28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C5049A31F5F94DE00C55B28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				7C3C26B01F623AE700C16669 /* totoroWalking.gif */,
+				7C3C26B21F62423900C16669 /* totoro_transparent.gif */,
 				7C5049A11F5F94DE00C55B28 /* AppDelegate.swift */,
 				7C5049A31F5F94DE00C55B28 /* ViewController.swift */,
 				7C5049A51F5F94DE00C55B28 /* Assets.xcassets */,
@@ -216,6 +219,7 @@
 				7C5049A61F5F94DE00C55B28 /* Assets.xcassets in Resources */,
 				7C3C26B11F623AE700C16669 /* totoroWalking.gif in Resources */,
 				7C5049C81F5F97FD00C55B28 /* WindowController.xib in Resources */,
+				7C3C26B31F62423900C16669 /* totoro_transparent.gif in Resources */,
 				7C5049A91F5F94DE00C55B28 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

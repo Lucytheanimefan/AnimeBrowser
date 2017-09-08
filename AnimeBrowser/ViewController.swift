@@ -24,6 +24,7 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var totoroImageView: NSImageView!
     
+    @IBOutlet var totoroTextView: NSTextView!
     
     var sideBarResults:[URL]! = [URL(string:"https://www.animenewsnetwork.com")!, URL(string:"https://www.myanimelist.net")!]
     
@@ -41,10 +42,12 @@ class ViewController: NSViewController {
     }
     
     func setTotoroGIF(){
+        //totoroTextView.textContainerInset = NSSize(width: 7, height: 7)
+        totoroTextView.string = "Watch anime"
         var imageData:Data!
         print(Bundle.main.bundleURL)
         do{
-            imageData = try Data(contentsOf: Bundle.main.url(forResource: "totoroWalking", withExtension: "gif")!)
+            imageData = try Data(contentsOf: Bundle.main.url(forResource: "totoro_transparent", withExtension: "gif")!)
         }
         catch {
             print(error)
