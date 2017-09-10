@@ -64,7 +64,6 @@ extension Requester:XMLParserDelegate{
     
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
-        //os_log("%@: %@ : %@", self.className, xmlElementName, string)
         print(string)
         if (xmlElementName == "anime"){
             xmlChunk[xmlElementName] = xmlChunk[xmlElementName] as! String + string

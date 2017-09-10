@@ -48,15 +48,13 @@ class ViewController: NSViewController {
     
     override var representedObject: Any? {
         didSet {
-            // Update the view, if already loaded.
+ 
         }
     }
     
     func setTotoroGIF(){
-        //totoroTextView.textContainerInset = NSSize(width: 7, height: 7)
         totoroTextView.string = "Watch anime"
         var imageData:Data!
-        print(Bundle.main.bundleURL)
         do{
             imageData = try Data(contentsOf: Bundle.main.url(forResource: "totoro_transparent", withExtension: "gif")!)
         }
@@ -95,6 +93,10 @@ extension ViewController: NSTableViewDataSource{
 
 extension ViewController:NSTableViewDelegate{
     
+    func tableView(_ tableView: NSTableView, rowViewForRow row: Int) -> NSTableRowView? {
+        return CustomRow()
+    }
+    
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let dict = self.recentlyAddedAnime[row]
         
@@ -104,7 +106,6 @@ extension ViewController:NSTableViewDelegate{
                 view.titleView.string = anime
                 return view
             }
-            
         }
         return nil
     }
@@ -119,12 +120,13 @@ extension ViewController:NSTableViewDelegate{
         }
     }
     
-    func tableView(_ tableView: NSTableView, willDisplayCell cell: Any, for tableColumn: NSTableColumn?, row: Int) {
-        if (tableView.selectedRow == row){
-            
-        }
-    }
+}
+
+extension ViewController: WKNavigationDelegate{
     
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        (NSApp.mainWindow?.windowController as! WindowController).urlBackQueue.append(webView.url!)
+    }
 }
 
 
