@@ -26,6 +26,31 @@ class ViewController: NSViewController {
     
     @IBOutlet var totoroTextView: NSTextView!
     
+    lazy var totoroImageData:Data? = {
+        var imageData:Data!
+        do{
+            imageData = try Data(contentsOf: Bundle.main.url(forResource: "totoro_transparent", withExtension: "gif")!)
+            return imageData
+        }
+        catch {
+            print(error)
+            return nil
+        }
+    }()
+    
+    lazy var totoroDanceImageData:Data? = {
+        var imageData:Data!
+        do{
+            imageData = try Data(contentsOf: Bundle.main.url(forResource: "totoro_dance", withExtension: "gif")!)
+            return imageData
+        }
+        catch {
+            print(error)
+            return nil
+        }
+
+    }()
+    
     var recentlyAddedAnime:[[String:Any]]! = [[String:Any]]()
     
     var sideBarResults:[URL]! = [URL(string:"https://www.animenewsnetwork.com")!, URL(string:"https://www.myanimelist.net")!]
@@ -54,16 +79,16 @@ class ViewController: NSViewController {
     
     func setTotoroGIF(){
         totoroTextView.string = "Watch anime"
-        var imageData:Data!
-        do{
-            imageData = try Data(contentsOf: Bundle.main.url(forResource: "totoro_transparent", withExtension: "gif")!)
-        }
-        catch {
-            print(error)
-            return
-        }
+//        var imageData:Data!
+//        do{
+//            imageData = try Data(contentsOf: Bundle.main.url(forResource: "totoro_transparent", withExtension: "gif")!)
+//        }
+//        catch {
+//            print(error)
+//            return
+//        }
         totoroImageView.animates = true
-        let advTimeGif = NSImage(data: imageData)
+        let advTimeGif = NSImage(data: self.totoroImageData!)
         totoroImageView.image = advTimeGif
     }
     
@@ -130,11 +155,16 @@ extension ViewController: WKNavigationDelegate{
     }
     
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        let gif = NSImage(data: self.totoroDanceImageData!)
+        totoroImageView.image = gif
+
         totoroTextView.string = "Go go go!"
     }
     
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         // Update the totoro
+        let gif = NSImage(data: self.totoroImageData!)
+        totoroImageView.image = gif
         totoroTextView.string = "Loaded! Time to watch anime!"
     }
     
