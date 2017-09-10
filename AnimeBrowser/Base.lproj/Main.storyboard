@@ -689,6 +689,7 @@
                     <connections>
                         <outlet property="backButton" destination="lPV-lG-zBk" id="tuB-PE-GbN"/>
                         <outlet property="browserHeaderView" destination="UA6-dp-OWA" id="QkN-PI-yS2"/>
+                        <outlet property="sideBarSelectionButton" destination="HQO-5G-zeA" id="nkx-68-Jhm"/>
                         <outlet property="toolBar" destination="d9K-BX-BJ3" id="SFl-oK-lS0"/>
                         <outlet property="urlField" destination="Dz2-g0-EWZ" id="jAm-Ba-nFL"/>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -805,6 +806,9 @@
                                     </items>
                                 </menu>
                             </popUpButtonCell>
+                            <connections>
+                                <action selector="sideBarSelection:" target="B8D-0N-5wS" id="QQJ-lf-1uS"/>
+                            </connections>
                         </popUpButton>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yhe-Cm-72O">
                             <rect key="frame" x="87" y="41" width="25" height="25"/>

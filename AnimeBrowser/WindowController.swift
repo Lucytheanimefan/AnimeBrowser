@@ -35,6 +35,13 @@ class WindowController: NSWindowController {
     
     let animeSites = ["CrunchyRoll": "http://www.crunchyroll.com/","Funimation": "https://www.funimation.com/", "ANN": "https://www.animenewsnetwork.com", "MAL": "https://www.myanimelist.net", "Reddit": "https://www.reddit.com", "AnimeMaru": "http://www.animemaru.com"]
     
+    
+    let idToEndpoint = ["RAAnime":Requester.recentlyAddedAnimeID, "RAManga":Requester.recentlyAddedMangaID, "RACompanies":Requester.recentlyAddedCompaniesID, "Ratings":Requester.ratingsID]
+    
+    let requester = Requester()
+    
+    @IBOutlet weak var sideBarSelectionButton: NSPopUpButton!
+    
     override func windowDidLoad() {
         super.windowDidLoad()
 
@@ -77,6 +84,20 @@ class WindowController: NSWindowController {
         openURL(url: url)
     }
     
+    @IBAction func sideBarSelection(_ sender: NSPopUpButton) {
+        let id = sender.selectedItem?.identifier
+        let endpoint = idToEndpoint[id!]
+        requester.makeRequest(endpoint: endpoint!, parameters: nil, type: "GET") { (data) in
+            if let vc = self.window?.contentViewController as? ViewController{
+                vc.recentlyAddedAnime = data
+                DispatchQueue.main.async {
+                    vc.tableView.reloadData()
+                }
+
+            }
+        }
+    }
+    
     @IBAction func goForward(_ sender: NSButton) {
         print("Forward url: ")
         let url = self.urlForwardQueue.removeLast()
@@ -86,6 +107,8 @@ class WindowController: NSWindowController {
         self.urlBackQueue.append(url)
         openURL(url: url)
     }
+    
+    
     
     @IBAction func bookButtonAction(_ sender: NSButton) {
     }

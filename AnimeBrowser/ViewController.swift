@@ -52,6 +52,9 @@ class ViewController: NSViewController {
     }()
     
     var recentlyAddedAnime:[[String:Any]]! = [[String:Any]]()
+    var recentlyAddedCompanies:[[String:Any]]! = [[String:Any]]()
+    var recentlyAddedManga:[[String:Any]]! = [[String:Any]]()
+    var ratings:[[String:Any]]! = [[String:Any]]()
     
     var sideBarResults:[URL]! = [URL(string:"https://www.animenewsnetwork.com")!, URL(string:"https://www.myanimelist.net")!]
     
@@ -129,8 +132,23 @@ extension ViewController:NSTableViewDelegate{
             if let anime = dict["anime"] as? String{
                 //print(anime)
                 view.titleView.string = anime
-                return view
             }
+            else if let manga = dict["manga"] as? String{
+                view.titleView.string = manga
+            }
+            else if let company = dict["company"] as? String{
+                view.titleView.string = company
+            }
+            //print(dict)
+            if let avg = dict["bayesian_average"] as? String{
+                let index = avg.index(avg.startIndex, offsetBy: 3)
+                view.titleView.string = view.titleView.string! + ", " + avg.substring(to: index)
+            }
+            if let votes = dict["nb_votes"] as? String{
+                view.subtitle.stringValue = "Number of votes: " + votes
+            }
+            
+            return view
         }
         return nil
     }
