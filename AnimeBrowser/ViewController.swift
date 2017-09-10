@@ -152,6 +152,7 @@ extension ViewController: WKNavigationDelegate{
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         (NSApp.mainWindow?.windowController as! WindowController).urlBackQueue.append(webView.url!)
+        (NSApp.mainWindow?.windowController as! WindowController).urlField.stringValue = webView.url!.absoluteString
     }
     
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
