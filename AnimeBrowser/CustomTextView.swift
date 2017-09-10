@@ -10,7 +10,10 @@ import Cocoa
 
 class CustomTextView: NSTextView {
     
-    let tableView:NSTableView! = (NSApp.mainWindow?.contentViewController as! ViewController).tableView
+    lazy var tableView:NSTableView! =
+        {
+            return (NSApp.mainWindow?.contentViewController as! ViewController).tableView
+    }()
 
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)

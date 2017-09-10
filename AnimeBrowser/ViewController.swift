@@ -117,6 +117,7 @@ extension ViewController:NSTableViewDelegate{
             let url = URL(string:(Requester.ANN + urlString))!
             let req = URLRequest(url: url)
             mainWebView.load(req)
+            totoroTextView.string = "Let's go load!"
         }
     }
     
@@ -127,6 +128,16 @@ extension ViewController: WKNavigationDelegate{
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         (NSApp.mainWindow?.windowController as! WindowController).urlBackQueue.append(webView.url!)
     }
+    
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        totoroTextView.string = "Go go go!"
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        // Update the totoro
+        totoroTextView.string = "Loaded! Time to watch anime!"
+    }
+    
 }
 
 
