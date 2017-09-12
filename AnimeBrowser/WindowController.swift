@@ -84,9 +84,9 @@ class WindowController: NSWindowController {
     
     @IBAction func goBack(_ sender: NSButton) {
         let url = self.urlBackQueue.removeLast()
-        print("Back url: ")
-        print(url)
-        print(self.urlBackQueue)
+//        print("Back url: ")
+//        print(url)
+//        print(self.urlBackQueue)
         self.urlField.stringValue = url.absoluteString
         self.urlForwardQueue.append(url)
         openURL(url: url)
@@ -127,19 +127,6 @@ class WindowController: NSWindowController {
             self.urlBackQueue.append(url)
             openURL(url: url)
         }
-    }
-    
-    @IBAction func createNewTab(_ sender: NSButton) {
-        // Just create a new webview
-        if let vc = self.window?.contentViewController as? ViewController{
-            // Save the state of the old one
-            let savedURL = vc.mainWebView.url
-            self.tabURLs.append(savedURL!)
-            
-            // Reset the webview
-            // vc.mainWebView = WKWebView.init(frame: vc.mainWebView.visibleRect)
-        }
-        
     }
     
     

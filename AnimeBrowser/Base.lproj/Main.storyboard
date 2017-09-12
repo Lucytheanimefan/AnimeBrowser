@@ -837,21 +837,7 @@
                                 <action selector="submitURLString:" target="B8D-0N-5wS" id="jYf-Ps-sQ2"/>
                             </connections>
                         </searchField>
-                        <button identifier="newTab" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="t32-NW-yd5">
-                            <rect key="frame" x="802" y="-1" width="13" height="21"/>
-                            <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7QM-rL-zZC">
-                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                <font key="font" metaFont="system"/>
-                            </buttonCell>
-                            <connections>
-                                <action selector="createNewTab:" target="B8D-0N-5wS" id="jFR-Sz-jqK"/>
-                            </connections>
-                        </button>
                     </subviews>
-                    <constraints>
-                        <constraint firstAttribute="bottom" secondItem="t32-NW-yd5" secondAttribute="bottom" id="oh6-Et-eX4"/>
-                        <constraint firstAttribute="trailing" secondItem="t32-NW-yd5" secondAttribute="trailing" id="yL7-mR-lEB"/>
-                    </constraints>
                 </customView>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
@@ -1127,7 +1113,6 @@
         <image name="CrunchyRoll" width="50" height="49"/>
         <image name="Funimation" width="50" height="50"/>
         <image name="MAL" width="50" height="50"/>
-        <image name="NSAddTemplate" width="11" height="11"/>
         <image name="NSBookmarksTemplate" width="17" height="18"/>
         <image name="NSLeftFacingTriangleTemplate" width="9" height="12"/>
         <image name="NSRightFacingTriangleTemplate" width="9" height="12"/>
