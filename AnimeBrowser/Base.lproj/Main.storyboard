@@ -875,13 +875,13 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <scrollView autohidesScrollers="YES" horizontalLineScroll="51" horizontalPageScroll="10" verticalLineScroll="51" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOy-p9-3FU">
-                                                                <rect key="frame" x="0.0" y="0.0" width="332" height="404"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="332" height="384"/>
                                                                 <clipView key="contentView" id="y4d-cX-FsL">
-                                                                    <rect key="frame" x="1" y="1" width="330" height="402"/>
+                                                                    <rect key="frame" x="1" y="1" width="330" height="382"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="49" rowSizeStyle="automatic" viewBased="YES" id="C13-Hk-63o">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="402"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="382"/>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                             <size key="intercellSpacing" width="3" height="2"/>
                                                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -982,15 +982,29 @@
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                 </scroller>
                                                             </scrollView>
+                                                            <searchField wantsLayer="YES" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSk-KL-lok">
+                                                                <rect key="frame" x="0.0" y="382" width="332" height="22"/>
+                                                                <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="ijr-ja-aoa">
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                </searchFieldCell>
+                                                                <connections>
+                                                                    <action selector="searchSideBar:" target="XfG-lQ-9wD" id="5sE-VZ-9fM"/>
+                                                                </connections>
+                                                            </searchField>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstItem="MOy-p9-3FU" firstAttribute="leading" secondItem="nYr-SB-aYU" secondAttribute="leading" id="CGj-je-lhh"/>
-                                                            <constraint firstItem="MOy-p9-3FU" firstAttribute="top" secondItem="nYr-SB-aYU" secondAttribute="top" id="Hcl-4u-23U"/>
+                                                            <constraint firstItem="MOy-p9-3FU" firstAttribute="top" secondItem="nYr-SB-aYU" secondAttribute="top" constant="20" id="Hcl-4u-23U"/>
                                                             <constraint firstAttribute="trailing" secondItem="MOy-p9-3FU" secondAttribute="trailing" id="Mv8-Yf-PWo"/>
                                                             <constraint firstAttribute="trailing" secondItem="MOy-p9-3FU" secondAttribute="trailing" id="dKq-Ci-qU9"/>
+                                                            <constraint firstItem="tSk-KL-lok" firstAttribute="leading" secondItem="nYr-SB-aYU" secondAttribute="leading" id="dRW-MR-nmg"/>
                                                             <constraint firstItem="MOy-p9-3FU" firstAttribute="leading" secondItem="nYr-SB-aYU" secondAttribute="leading" id="kNN-as-pJb"/>
-                                                            <constraint firstItem="MOy-p9-3FU" firstAttribute="top" secondItem="nYr-SB-aYU" secondAttribute="top" id="m7Z-Br-iZ9"/>
+                                                            <constraint firstItem="MOy-p9-3FU" firstAttribute="top" secondItem="nYr-SB-aYU" secondAttribute="top" constant="20" id="m7Z-Br-iZ9"/>
+                                                            <constraint firstItem="tSk-KL-lok" firstAttribute="top" secondItem="nYr-SB-aYU" secondAttribute="top" id="qgf-Hn-fKK"/>
                                                             <constraint firstAttribute="bottom" secondItem="MOy-p9-3FU" secondAttribute="bottom" id="rvy-Oh-Ws6"/>
+                                                            <constraint firstAttribute="trailing" secondItem="tSk-KL-lok" secondAttribute="trailing" id="xMe-CW-jcQ"/>
                                                             <constraint firstAttribute="bottom" secondItem="MOy-p9-3FU" secondAttribute="bottom" id="xRc-Dn-wzR"/>
                                                         </constraints>
                                                     </customView>
@@ -1091,6 +1105,7 @@
                         <outlet property="leftView" destination="0IP-hi-Izv" id="XFP-0T-YCa"/>
                         <outlet property="mainWebView" destination="Hqb-Kx-i4j" id="Lsx-GK-QBm"/>
                         <outlet property="rightView" destination="czw-31-A9w" id="PZ9-sM-wGp"/>
+                        <outlet property="sideBarSearchField" destination="tSk-KL-lok" id="Tgj-Ba-JV0"/>
                         <outlet property="splitView" destination="yax-EC-O7o" id="jJi-FN-H4X"/>
                         <outlet property="tableView" destination="C13-Hk-63o" id="zbx-Se-F6g"/>
                         <outlet property="totoroImageView" destination="USn-o3-s55" id="HeX-CR-zor"/>

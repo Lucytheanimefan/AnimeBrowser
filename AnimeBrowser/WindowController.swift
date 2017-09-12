@@ -93,8 +93,8 @@ class WindowController: NSWindowController {
         let endpoint = idToEndpoint[id!]
         requester.makeRequest(endpoint: endpoint!, parameters: nil, type: "GET") { (data) in
             if let vc = self.window?.contentViewController as? ViewController{
-                print(data)
-                vc.recentlyAddedAnime = data
+                vc.sidebarData = data
+                UserDefaults.standard.set(data, forKey: "sidebarData")
                 DispatchQueue.main.async {
                     vc.tableView.reloadData()
                 }

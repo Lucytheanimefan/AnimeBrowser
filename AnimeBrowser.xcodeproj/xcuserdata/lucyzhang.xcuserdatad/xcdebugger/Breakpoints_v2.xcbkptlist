@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnimeBrowser/WindowController.swift"
-            timestampString = "526872811.330394"
+            timestampString = "526876819.217529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "137"
@@ -74,7 +74,7 @@
                   moduleName = "AnimeBrowser"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lucyzhang/Github/AnimeBrowser/AnimeBrowser/WindowController.swift"
-                  timestampString = "526873557.072679"
+                  timestampString = "526876819.773585"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "137"
@@ -89,7 +89,7 @@
                   moduleName = "AnimeBrowser"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lucyzhang/Github/AnimeBrowser/AnimeBrowser/WindowController.swift"
-                  timestampString = "526873557.075078"
+                  timestampString = "526876819.776546"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "137"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnimeBrowser/WindowController.swift"
-            timestampString = "526872811.330394"
+            timestampString = "526876819.217529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "138"
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnimeBrowser/WindowController.swift"
-            timestampString = "526872811.330394"
+            timestampString = "526876819.217529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "141"
@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnimeBrowser/WindowController.swift"
-            timestampString = "526872811.330394"
+            timestampString = "526876819.217529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "120"
@@ -170,7 +170,7 @@
                   moduleName = "AnimeBrowser"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lucyzhang/Github/AnimeBrowser/AnimeBrowser/WindowController.swift"
-                  timestampString = "526873557.095093"
+                  timestampString = "526876819.798432"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "120"
@@ -185,7 +185,7 @@
                   moduleName = "AnimeBrowser"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lucyzhang/Github/AnimeBrowser/AnimeBrowser/WindowController.swift"
-                  timestampString = "526873557.097495"
+                  timestampString = "526876819.800235"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "120"
@@ -202,12 +202,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnimeBrowser/ViewController.swift"
-            timestampString = "526872801.247085"
+            timestampString = "526876869.651251"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
             landmarkName = "tableView(_:viewFor:row:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimeBrowser/ViewController.swift"
+            timestampString = "526876654.5673"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "searchSideBar(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimeBrowser/ViewController.swift"
+            timestampString = "526876733.211127"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "searchSideBar(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

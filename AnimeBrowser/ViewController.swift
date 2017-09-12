@@ -26,6 +26,9 @@ class ViewController: NSViewController {
     
     @IBOutlet var totoroTextView: NSTextView!
     
+    @IBOutlet weak var sideBarSearchField: NSSearchField!
+    
+    
     lazy var totoroImageData:Data? = {
         var imageData:Data!
         do{
@@ -51,10 +54,8 @@ class ViewController: NSViewController {
 
     }()
     
-    var recentlyAddedAnime:[[String:Any]]! = [[String:Any]]()
-    var recentlyAddedCompanies:[[String:Any]]! = [[String:Any]]()
-    var recentlyAddedManga:[[String:Any]]! = [[String:Any]]()
-    var ratings:[[String:Any]]! = [[String:Any]]()
+    // This is used not only for anime, but for manga, companies and ratings too
+    var sidebarData:[[String:Any]]! = [[String:Any]]()
     
     var sideBarResults:[URL]! = [URL(string:"https://www.animenewsnetwork.com")!, URL(string:"https://www.myanimelist.net")!]
     
@@ -67,11 +68,13 @@ class ViewController: NSViewController {
         let requester = Requester()
         requester.makeRequest(endpoint: Requester.recentlyAddedAnimeID, parameters: nil, type: "GET") { (data) in
             print("Entered completion")
-            self.recentlyAddedAnime = data
+            self.sidebarData = data
+            UserDefaults.standard.set(self.sidebarData, forKey: "sidebarData")
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
+        
     }
     
     override var representedObject: Any? {
@@ -82,19 +85,31 @@ class ViewController: NSViewController {
     
     func setTotoroGIF(){
         totoroTextView.string = "Watch anime"
-//        var imageData:Data!
-//        do{
-//            imageData = try Data(contentsOf: Bundle.main.url(forResource: "totoro_transparent", withExtension: "gif")!)
-//        }
-//        catch {
-//            print(error)
-//            return
-//        }
         totoroImageView.animates = true
         let advTimeGif = NSImage(data: self.totoroImageData!)
         totoroImageView.image = advTimeGif
     }
     
+    @IBAction func searchSideBar(_ sender: NSSearchField) {
+        let text = sender.stringValue
+        if (text.characters.count == 0){
+            if let sidebarData = UserDefaults.standard.object(forKey: "sidebarData") as? [[String:Any]]{
+                self.sidebarData = sidebarData
+                print(self.sidebarData)
+                self.tableView.reloadData()
+                return
+            }
+        }
+        let predicate = NSPredicate(format: "anime contains[c] %@ or manga contains[c] %@ or company contains[c] %@", text, text, text)
+
+        let filteredEntries = ((self.sidebarData as! NSArray).filtered(using: predicate)) as! [[String:Any]]
+        
+        print(filteredEntries)
+        self.sidebarData = filteredEntries
+        self.tableView.reloadData()
+        //self.sidebarData = UserDefaults.standard.object(forKey: "sidebarData") as! [[String:Any]]
+        
+    }
     
 }
 
@@ -110,7 +125,7 @@ extension ViewController:NSSplitViewDelegate{
 
 extension ViewController: NSTableViewDataSource{
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return self.recentlyAddedAnime.count
+        return self.sidebarData.count
     }
     
     func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
@@ -126,7 +141,7 @@ extension ViewController:NSTableViewDelegate{
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let dict = self.recentlyAddedAnime[row]
+        let dict = self.sidebarData[row]
         
         if let view = tableView.make(withIdentifier: "webCell", owner: nil) as? CustomCell{
             if let anime = dict["anime"] as? String{
@@ -139,13 +154,18 @@ extension ViewController:NSTableViewDelegate{
             else if let company = dict["company"] as? String{
                 view.titleView.string = company
             }
-            //print(dict)
+ 
             if let avg = dict["bayesian_average"] as? String{
                 let index = avg.index(avg.startIndex, offsetBy: 3)
                 view.titleView.string = view.titleView.string! + ", " + avg.substring(to: index)
             }
-            if let votes = dict["nb_votes"] as? String{
+            if let votes = dict["nb_votes"] as? String
+            {
                 view.subtitle.stringValue = "Number of votes: " + votes
+            }
+            else if let date = dict["date_added"] as? String
+            {
+                view.subtitle.stringValue = "Added: " + date
             }
             
             return view
@@ -155,7 +175,7 @@ extension ViewController:NSTableViewDelegate{
     
     func tableViewSelectionDidChange(_ notification: Notification) {
         let row = tableView.selectedRow
-        let dict = self.recentlyAddedAnime[row]
+        let dict = self.sidebarData[row]
         if let urlString = dict["href"] as? String{
             let url = URL(string:(Requester.ANN + urlString))!
             let req = URLRequest(url: url)

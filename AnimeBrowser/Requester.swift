@@ -65,7 +65,12 @@ extension Requester:XMLParserDelegate{
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         //print(string)
-        if (xmlElementName == "anime" || xmlElementName == "manga" || xmlElementName == "company" || xmlElementName == "nb_votes" || xmlElementName == "bayesian_average"){
+        if (xmlElementName == "anime" || xmlElementName == "manga" || xmlElementName == "company" || xmlElementName == "nb_votes" || xmlElementName == "bayesian_average" || xmlElementName == "date_added")
+        {
+            if (xmlChunk[xmlElementName] == nil){
+                xmlChunk[xmlElementName] = ""
+            }
+
             xmlChunk[xmlElementName] = xmlChunk[xmlElementName] as! String + string
         }
     }
