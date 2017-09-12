@@ -52,16 +52,13 @@ class Requester: NSObject {
 
 extension Requester:XMLParserDelegate{
     
-    
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         xmlElementName = elementName
         xmlChunk[xmlElementName] = ""
         if let url = attributeDict["href"]{
             xmlChunk["href"] = url
         }
-        
     }
-    
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         //print(string)

@@ -97,6 +97,7 @@ class WindowController: NSWindowController {
         if (id == "malMenuIdentifier"){
             if let vc = self.window?.contentViewController as? ViewController{
                 vc.sidebarData = malAnimeEntries as! [[String : Any]]
+                UserDefaults.standard.set(malAnimeEntries, forKey: "sidebarData")
                 DispatchQueue.main.async {
                     vc.tableView.reloadData()
                 }

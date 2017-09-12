@@ -101,9 +101,9 @@ class ViewController: NSViewController {
                 return
             }
         }
-        let predicate = NSPredicate(format: "anime contains[c] %@ or manga contains[c] %@ or company contains[c] %@", text, text, text)
+        let predicate = NSPredicate(format: "anime contains[c] %@ or manga contains[c] %@ or company contains[c] %@ or title contains[c] %@", text, text, text, text, text)
 
-        let filteredEntries = ((self.sidebarData as! NSArray).filtered(using: predicate)) as! [[String:Any]]
+        let filteredEntries = ((self.sidebarData! as NSArray).filtered(using: predicate)) as! [[String:Any]]
         
         //print(filteredEntries)
         self.sidebarData = filteredEntries
@@ -173,8 +173,9 @@ extension ViewController:NSTableViewDelegate{
             {
                 view.subtitle.stringValue = "Added: " + date
             }
-            else if let userScore = dict["user_score"] as? String{
-                view.subtitle.stringValue = "Score value " + userScore
+            else if let userScore = dict["user_score"]
+            {
+                view.subtitle.stringValue = "Score value: " + String(describing: userScore)
             }
             
             return view
