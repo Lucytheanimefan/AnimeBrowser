@@ -18,6 +18,8 @@
 //    - Nice icons/library system of organization
 
 import Cocoa
+import AppKit
+import WebKit
 
 class WindowController: NSWindowController {
     @IBOutlet weak var toolBar: NSToolbar!
@@ -31,9 +33,11 @@ class WindowController: NSWindowController {
     var urlBackQueue:[URL] = [URL]()
     var urlForwardQueue:[URL] = [URL]()
     
+    var tabURLs:[URL] = [URL]()
+    
     let BrowserHeaderToolbarID = "BrowserHeaderID"
     
-    let animeSites = ["CrunchyRoll": "http://www.crunchyroll.com/","Funimation": "https://www.funimation.com/", "ANN": "https://www.animenewsnetwork.com", "MAL": "https://www.myanimelist.net", "Reddit": "https://www.reddit.com", "AnimeMaru": "http://www.animemaru.com"]
+    let animeSites = ["CrunchyRoll": "http://www.crunchyroll.com/","Funimation": "https://www.funimation.com/", "ANN": "https://www.animenewsnetwork.com", "MAL": "https://www.myanimelist.net", "Reddit": "https://www.reddit.com/r/anime", "AnimeMaru": "http://www.animemaru.com"]
     
     
     let idToEndpoint = ["RAAnime":Requester.recentlyAddedAnimeID, "RAManga":Requester.recentlyAddedMangaID, "RACompanies":Requester.recentlyAddedCompaniesID, "Ratings":Requester.ratingsID]
@@ -89,6 +93,7 @@ class WindowController: NSWindowController {
         let endpoint = idToEndpoint[id!]
         requester.makeRequest(endpoint: endpoint!, parameters: nil, type: "GET") { (data) in
             if let vc = self.window?.contentViewController as? ViewController{
+                print(data)
                 vc.recentlyAddedAnime = data
                 DispatchQueue.main.async {
                     vc.tableView.reloadData()
@@ -100,14 +105,28 @@ class WindowController: NSWindowController {
     
     @IBAction func goForward(_ sender: NSButton) {
         print("Forward url: ")
-        let url = self.urlForwardQueue.removeLast()
-        print(url)
-        print(self.urlForwardQueue)
-        self.urlField.stringValue = url.absoluteString
-        self.urlBackQueue.append(url)
-        openURL(url: url)
+        if (self.urlForwardQueue.count > 0){
+            let url = self.urlForwardQueue.removeLast()
+            print(url)
+            print(self.urlForwardQueue)
+            self.urlField.stringValue = url.absoluteString
+            self.urlBackQueue.append(url)
+            openURL(url: url)
+        }
     }
     
+    @IBAction func createNewTab(_ sender: NSButton) {
+        // Just create a new webview
+        if let vc = self.window?.contentViewController as? ViewController{
+            // Save the state of the old one
+            let savedURL = vc.mainWebView.url
+            self.tabURLs.append(savedURL!)
+            
+            // Reset the webview
+            // vc.mainWebView = WKWebView.init(frame: vc.mainWebView.visibleRect)
+        }
+        
+    }
     
     
     @IBAction func bookButtonAction(_ sender: NSButton) {
@@ -202,7 +221,5 @@ extension WindowController:NSToolbarDelegate {
                  NSToolbarFlexibleSpaceItemIdentifier,
                  NSToolbarPrintItemIdentifier ]
     }
-    
-
-
 }
+

@@ -76,6 +76,7 @@ extension Requester:XMLParserDelegate{
             //print("append to chunks")
             // append the chunk
             xmlChunks.append(xmlChunk)
+            xmlChunk = [String:Any]()
         }
         // Finished 1 chunk of data, time to do something with it
         if (elementName == "report"){
@@ -83,6 +84,7 @@ extension Requester:XMLParserDelegate{
             //os_log("%@: CHUNK: %@", self.className, xmlChunk)
             self.completion(xmlChunks)
             xmlChunks = [[String:Any]]()
+            
         }
     }
     

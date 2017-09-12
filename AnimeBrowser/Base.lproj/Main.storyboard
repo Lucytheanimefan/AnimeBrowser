@@ -697,11 +697,11 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <customView id="UA6-dp-OWA">
-                    <rect key="frame" x="0.0" y="0.0" width="823" height="76"/>
+                    <rect key="frame" x="0.0" y="0.0" width="815" height="76"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lPV-lG-zBk">
-                            <rect key="frame" x="62" y="41" width="25" height="25"/>
+                            <rect key="frame" x="69" y="52" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSLeftFacingTriangleTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hy3-IL-jTb">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -712,7 +712,7 @@
                             </connections>
                         </button>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9x8-hL-nBi">
-                            <rect key="frame" x="9" y="41" width="37" height="25"/>
+                            <rect key="frame" x="9" y="52" width="37" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSBookmarksTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VUI-Qb-kah">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -723,7 +723,7 @@
                             </connections>
                         </button>
                         <button identifier="CrunchyRoll" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HIf-Vk-haD">
-                            <rect key="frame" x="665" y="42" width="21" height="25"/>
+                            <rect key="frame" x="665" y="51" width="21" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="CrunchyRoll" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="n9e-rO-JBe">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -734,7 +734,7 @@
                             </connections>
                         </button>
                         <button identifier="Funimation" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nOe-8Y-W61">
-                            <rect key="frame" x="686" y="40" width="21" height="25"/>
+                            <rect key="frame" x="686" y="51" width="21" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="Funimation" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="BEj-CL-YUN">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -745,7 +745,7 @@
                             </connections>
                         </button>
                         <button identifier="ANN" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mHk-oq-V8t">
-                            <rect key="frame" x="707" y="40" width="21" height="25"/>
+                            <rect key="frame" x="707" y="51" width="21" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="ANN" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="DoA-1D-DsH">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -756,7 +756,7 @@
                             </connections>
                         </button>
                         <button identifier="MAL" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wLZ-3P-sL1">
-                            <rect key="frame" x="727" y="40" width="21" height="25"/>
+                            <rect key="frame" x="727" y="52" width="21" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="MAL" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="ub3-qc-fgD">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -767,7 +767,7 @@
                             </connections>
                         </button>
                         <button identifier="Reddit" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YJH-3h-sHi">
-                            <rect key="frame" x="748" y="40" width="21" height="25"/>
+                            <rect key="frame" x="748" y="51" width="21" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="Reddit" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="tDu-9L-j10">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -778,7 +778,7 @@
                             </connections>
                         </button>
                         <button identifier="AnimeMaru" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dqz-wq-LqO">
-                            <rect key="frame" x="769" y="40" width="21" height="25"/>
+                            <rect key="frame" x="769" y="51" width="21" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="AnimeMaru" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="538-Tt-dWy">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -789,7 +789,7 @@
                             </connections>
                         </button>
                         <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HQO-5G-zeA">
-                            <rect key="frame" x="7" y="6" width="150" height="26"/>
+                            <rect key="frame" x="7" y="24" width="150" height="26"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <popUpButtonCell key="cell" type="push" title="Recently added anime" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Kt1-11-gqt" id="D4Q-Su-Njo">
                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -811,7 +811,7 @@
                             </connections>
                         </popUpButton>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yhe-Cm-72O">
-                            <rect key="frame" x="87" y="41" width="25" height="25"/>
+                            <rect key="frame" x="95" y="52" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSRightFacingTriangleTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="AWz-Ny-kkq">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -822,7 +822,7 @@
                             </connections>
                         </button>
                         <searchField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dz2-g0-EWZ">
-                            <rect key="frame" x="176" y="40" width="471" height="22"/>
+                            <rect key="frame" x="176" y="54" width="471" height="22"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="pWP-HR-ef6">
                                 <font key="font" metaFont="system"/>
@@ -833,7 +833,21 @@
                                 <action selector="submitURLString:" target="B8D-0N-5wS" id="jYf-Ps-sQ2"/>
                             </connections>
                         </searchField>
+                        <button identifier="newTab" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="t32-NW-yd5">
+                            <rect key="frame" x="802" y="-1" width="13" height="21"/>
+                            <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7QM-rL-zZC">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="createNewTab:" target="B8D-0N-5wS" id="jFR-Sz-jqK"/>
+                            </connections>
+                        </button>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="t32-NW-yd5" secondAttribute="bottom" id="oh6-Et-eX4"/>
+                        <constraint firstAttribute="trailing" secondItem="t32-NW-yd5" secondAttribute="trailing" id="yL7-mR-lEB"/>
+                    </constraints>
                 </customView>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
@@ -841,7 +855,7 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="AnimeBrowser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewControllerID" id="XfG-lQ-9wD" customClass="ViewController" customModule="AnimeBrowser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="1157" height="638"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -985,17 +999,17 @@
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <scrollView wantsLayer="YES" fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSM-Tc-euc">
-                                                                <rect key="frame" x="0.0" y="0.0" width="332" height="52"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="332" height="43"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="KQw-d2-cIs">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="332" height="52"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="332" height="43"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textView ambiguous="YES" editable="NO" drawsBackground="NO" importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="i32-R2-Ape">
-                                                                            <rect key="frame" x="0.0" y="-0.5" width="332" height="52"/>
+                                                                            <rect key="frame" x="0.0" y="-0.5" width="332" height="43"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                            <size key="minSize" width="332" height="52"/>
+                                                                            <size key="minSize" width="332" height="43"/>
                                                                             <size key="maxSize" width="463" height="10000000"/>
                                                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                         </textView>
@@ -1007,7 +1021,7 @@
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                 </scroller>
                                                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="eKw-el-eet">
-                                                                    <rect key="frame" x="316" y="0.0" width="16" height="52"/>
+                                                                    <rect key="frame" x="316" y="0.0" width="16" height="43"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                 </scroller>
                                                             </scrollView>
@@ -1094,6 +1108,7 @@
         <image name="CrunchyRoll" width="50" height="49"/>
         <image name="Funimation" width="50" height="50"/>
         <image name="MAL" width="50" height="50"/>
+        <image name="NSAddTemplate" width="11" height="11"/>
         <image name="NSBookmarksTemplate" width="17" height="18"/>
         <image name="NSLeftFacingTriangleTemplate" width="9" height="12"/>
         <image name="NSRightFacingTriangleTemplate" width="9" height="12"/>
