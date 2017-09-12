@@ -42,6 +42,10 @@ class WindowController: NSWindowController {
     
     let idToEndpoint = ["RAAnime":Requester.recentlyAddedAnimeID, "RAManga":Requester.recentlyAddedMangaID, "RACompanies":Requester.recentlyAddedCompaniesID, "Ratings":Requester.ratingsID]
     
+    lazy var malAnimeEntries:[NSDictionary]? = {
+        return CFPreferencesCopyValue("malEntries" as CFString, "com.lucy.anime" as CFString, kCFPreferencesCurrentUser, kCFPreferencesAnyHost) as? [NSDictionary]
+    }()
+    
     let requester = Requester()
     
     @IBOutlet weak var sideBarSelectionButton: NSPopUpButton!
@@ -90,15 +94,24 @@ class WindowController: NSWindowController {
     
     @IBAction func sideBarSelection(_ sender: NSPopUpButton) {
         let id = sender.selectedItem?.identifier
-        let endpoint = idToEndpoint[id!]
-        requester.makeRequest(endpoint: endpoint!, parameters: nil, type: "GET") { (data) in
+        if (id == "malMenuIdentifier"){
             if let vc = self.window?.contentViewController as? ViewController{
-                vc.sidebarData = data
-                UserDefaults.standard.set(data, forKey: "sidebarData")
+                vc.sidebarData = malAnimeEntries as! [[String : Any]]
                 DispatchQueue.main.async {
                     vc.tableView.reloadData()
                 }
-
+            }
+        }else{
+            let endpoint = idToEndpoint[id!]
+            requester.makeRequest(endpoint: endpoint!, parameters: nil, type: "GET") { (data) in
+                if let vc = self.window?.contentViewController as? ViewController{
+                    vc.sidebarData = data
+                    UserDefaults.standard.set(data, forKey: "sidebarData")
+                    DispatchQueue.main.async {
+                        vc.tableView.reloadData()
+                    }
+                    
+                }
             }
         }
     }

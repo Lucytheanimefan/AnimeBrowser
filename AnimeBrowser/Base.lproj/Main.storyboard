@@ -789,7 +789,7 @@
                             </connections>
                         </button>
                         <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HQO-5G-zeA">
-                            <rect key="frame" x="7" y="24" width="150" height="26"/>
+                            <rect key="frame" x="7" y="24" width="177" height="26"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <popUpButtonCell key="cell" type="push" title="Recently added anime" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Kt1-11-gqt" id="D4Q-Su-Njo">
                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -802,6 +802,10 @@
                                         <menuItem isSeparatorItem="YES" id="kAU-wp-olH"/>
                                         <menuItem title="Ratings (anime)" identifier="Ratings" id="esw-ux-8h7">
                                             <modifierMask key="keyEquivalentModifierMask"/>
+                                        </menuItem>
+                                        <menuItem title="MyAnimeList" identifier="malMenuIdentifier" id="BSz-2I-5TR">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <accessibility identifier="malMenuIdentifier"/>
                                         </menuItem>
                                     </items>
                                 </menu>

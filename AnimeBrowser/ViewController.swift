@@ -29,6 +29,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var sideBarSearchField: NSSearchField!
     
     
+    
     lazy var totoroImageData:Data? = {
         var imageData:Data!
         do{
@@ -104,7 +105,7 @@ class ViewController: NSViewController {
 
         let filteredEntries = ((self.sidebarData as! NSArray).filtered(using: predicate)) as! [[String:Any]]
         
-        print(filteredEntries)
+        //print(filteredEntries)
         self.sidebarData = filteredEntries
         self.tableView.reloadData()
         //self.sidebarData = UserDefaults.standard.object(forKey: "sidebarData") as! [[String:Any]]
@@ -154,6 +155,11 @@ extension ViewController:NSTableViewDelegate{
             else if let company = dict["company"] as? String{
                 view.titleView.string = company
             }
+            
+            // MAL entries
+            if let title = dict["title"] as? String{
+                view.titleView.string = title
+            }
  
             if let avg = dict["bayesian_average"] as? String{
                 let index = avg.index(avg.startIndex, offsetBy: 3)
@@ -166,6 +172,9 @@ extension ViewController:NSTableViewDelegate{
             else if let date = dict["date_added"] as? String
             {
                 view.subtitle.stringValue = "Added: " + date
+            }
+            else if let userScore = dict["user_score"] as? String{
+                view.subtitle.stringValue = "Score value " + userScore
             }
             
             return view
@@ -181,8 +190,15 @@ extension ViewController:NSTableViewDelegate{
             let req = URLRequest(url: url)
             mainWebView.load(req)
             totoroTextView.string = "Let's go load!"
+        } else if let urlString = dict["url"] as? String{
+             let url = URL(string:urlString)
+            let req = URLRequest(url: url!)
+            mainWebView.load(req)
+            totoroTextView.string = "Let's go load!"
         }
     }
+    
+    
     
 }
 
