@@ -17,38 +17,6 @@
             endingLineNumber = "138"
             landmarkName = "openURL(url:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AnimeBrowser.WindowController.openURL (url : Foundation.URL) -&gt; ()"
-                  moduleName = "AnimeBrowser"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lucyzhang/Github/AnimeBrowser/AnimeBrowser/WindowController.swift"
-                  timestampString = "526879537.050444"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "138"
-                  endingLineNumber = "138"
-                  offsetFromSymbolStart = "19">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AnimeBrowser.WindowController.openURL (url : Foundation.URL) -&gt; ()"
-                  moduleName = "AnimeBrowser"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lucyzhang/Github/AnimeBrowser/AnimeBrowser/WindowController.swift"
-                  timestampString = "526879537.053195"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "138"
-                  endingLineNumber = "138"
-                  offsetFromSymbolStart = "346">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

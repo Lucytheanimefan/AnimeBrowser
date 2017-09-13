@@ -29,7 +29,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var sideBarSearchField: NSSearchField!
     
     
-    
+    let requester = Requester()
     lazy var totoroImageData:Data? = {
         var imageData:Data!
         do{
@@ -66,7 +66,6 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         setTotoroGIF()
         
-        let requester = Requester()
         requester.makeRequest(endpoint: Requester.recentlyAddedAnimeID, parameters: nil, type: "GET") { (data) in
             print("Entered completion")
             self.sidebarData = data
@@ -186,16 +185,23 @@ extension ViewController:NSTableViewDelegate{
     func tableViewSelectionDidChange(_ notification: Notification) {
         let row = tableView.selectedRow
         let dict = self.sidebarData[row]
+        var url:URL!
         if let urlString = dict["href"] as? String{
-            let url = URL(string:(Requester.ANN + urlString))!
-            let req = URLRequest(url: url)
-            mainWebView.load(req)
-            totoroTextView.string = "Let's go load!"
+            url = URL(string:(Requester.ANN + urlString))!
         } else if let urlString = dict["url"] as? String{
-             let url = URL(string:urlString)
+            url = URL(string:urlString)
+        }
+        if (url != nil){
             let req = URLRequest(url: url!)
             mainWebView.load(req)
             totoroTextView.string = "Let's go load!"
+        }
+        
+        // Find entries relevant to searched
+        // Reddit!
+        requester.makeGeneralRequest(url: Requester.Reddit + Requester.RedditSearchEndpoint, parameters: nil, type: "GET") { (result) in
+            print("Reddit result!")
+            print(result)
         }
     }
     

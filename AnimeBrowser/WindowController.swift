@@ -118,21 +118,16 @@ class WindowController: NSWindowController {
     }
     
     @IBAction func goForward(_ sender: NSButton) {
-        print("Forward url: ")
         if (self.urlForwardQueue.count > 0){
             let url = self.urlForwardQueue.removeLast()
-            print(url)
-            print(self.urlForwardQueue)
             self.urlField.stringValue = url.absoluteString
             self.urlBackQueue.append(url)
             openURL(url: url)
         }
     }
     
-    
     @IBAction func bookButtonAction(_ sender: NSButton) {
     }
-    
     
     func openURL(url:URL){
         if let vc = self.window?.contentViewController as? ViewController{

@@ -10,6 +10,8 @@ import Cocoa
 import os.log
 
 class Requester: NSObject {
+    static let Reddit:String = "http://www.reddit.com/r/anime"
+    static let RedditSearchEndpoint:String = "/search.json?q="
     static let ANN:String = "https://www.animenewsnetwork.com"
     static let reportsEndpoint:String = "/encyclopedia/reports.xml?id="
     static let recentlyAddedAnimeID:String = "148"
@@ -47,6 +49,31 @@ class Requester: NSObject {
             }
             }.resume()
     }
+    
+    func makeGeneralRequest(url:String, parameters:[String:Any]?, type:String, completion:@escaping ((_ data:[String:Any])->Void)){
+        var request = URLRequest(url: URL(string: url)!)
+        request.httpMethod = type
+        let session = URLSession.shared
+        
+
+        session.dataTask(with: request) {data, response, err in
+            if (err != nil){
+                print("Error with request :(")
+                print(err!.localizedDescription)
+            }
+            else{
+                do{
+                    let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String : Any]
+                    completion(json)
+                    
+                }catch let error as NSError{
+                    print(error)
+                }
+            }
+            }.resume()
+    }
+    
+    
     
 }
 
