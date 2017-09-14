@@ -28,6 +28,9 @@ class ViewController: NSViewController {
     
     @IBOutlet weak var sideBarSearchField: NSSearchField!
     
+    // True if the sidebar has done a second level of searching for the selected row. Will not drill deeper than that...for now
+    var madeSubSearch:Bool = false
+    
     
     let requester = Requester()
     lazy var totoroImageData:Data? = {
@@ -144,52 +147,72 @@ extension ViewController:NSTableViewDelegate{
         let dict = self.sidebarData[row]
         
         if let view = tableView.make(withIdentifier: "webCell", owner: nil) as? CustomCell{
-            if let anime = dict["anime"] as? String{
-                //print(anime)
-                view.titleView.string = anime
-            }
-            else if let manga = dict["manga"] as? String{
-                view.titleView.string = manga
-            }
-            else if let company = dict["company"] as? String{
-                view.titleView.string = company
-            }
             
-            // MAL entries
-            if let title = dict["title"] as? String{
-                view.titleView.string = title
+            // reddit
+            if let data = dict["data"] as? [String:Any]{
+                if let title = data["title"] as? String{
+                    view.titleView.string = title
+                }
+                if let domain = data["domain"] as? String{
+                    view.subtitle.stringValue = domain
+                }
+            } else {
+                
+                // ANN
+                /*
+                if let anime = dict["anime"] as? String{
+                    //print(anime)
+                    view.titleView.string = anime
+                }
+                else if let manga = dict["manga"] as? String{
+                    view.titleView.string = manga
+                }
+                else if let company = dict["company"] as? String{
+                    view.titleView.string = company
+                }
+                 */
+                
+                // MAL entries
+                if let title = dict["title"] as? String{
+                    view.titleView.string = title
+                }
+                
+                // ANN ratings, MAL ratings
+                if let avg = dict["bayesian_average"] as? String{
+                    let index = avg.index(avg.startIndex, offsetBy: 3)
+                    view.titleView.string = view.titleView.string! + ", " + avg.substring(to: index)
+                }
+                if let votes = dict["nb_votes"] as? String
+                {
+                    view.subtitle.stringValue = "Number of votes: " + votes
+                }
+                else if let date = dict["date_added"] as? String
+                {
+                    view.subtitle.stringValue = "Added: " + date
+                }
+                else if let userScore = dict["user_score"]
+                {
+                    view.subtitle.stringValue = "Score value: " + String(describing: userScore)
+                }
             }
- 
-            if let avg = dict["bayesian_average"] as? String{
-                let index = avg.index(avg.startIndex, offsetBy: 3)
-                view.titleView.string = view.titleView.string! + ", " + avg.substring(to: index)
-            }
-            if let votes = dict["nb_votes"] as? String
-            {
-                view.subtitle.stringValue = "Number of votes: " + votes
-            }
-            else if let date = dict["date_added"] as? String
-            {
-                view.subtitle.stringValue = "Added: " + date
-            }
-            else if let userScore = dict["user_score"]
-            {
-                view.subtitle.stringValue = "Score value: " + String(describing: userScore)
-            }
-            
             return view
         }
         return nil
     }
     
     func tableViewSelectionDidChange(_ notification: Notification) {
-        let row = tableView.selectedRow
-        let dict = self.sidebarData[row]
+        let rowIndex = tableView.selectedRow
+        let dict = self.sidebarData[rowIndex]
         var url:URL!
         if let urlString = dict["href"] as? String{
             url = URL(string:(Requester.ANN + urlString))!
         } else if let urlString = dict["url"] as? String{
             url = URL(string:urlString)
+        }
+        else if let data = dict["data"] as? [String:Any]{
+            if let urlString = data["permalink"] as? String{
+                url = URL(string: Requester.Reddit + urlString)
+            }
         }
         if (url != nil){
             let req = URLRequest(url: url!)
@@ -199,14 +222,20 @@ extension ViewController:NSTableViewDelegate{
         
         // Find entries relevant to searched
         // Reddit!
-        requester.makeGeneralRequest(url: Requester.Reddit + Requester.RedditSearchEndpoint, parameters: nil, type: "GET") { (result) in
-            print("Reddit result!")
-            print(result)
+        if let query = dict["title"] as? String{
+            let queryFormatted = query.replacingOccurrences(of: " ", with: "+")
+            requester.makeGeneralRequest(url: Requester.Reddit + Requester.RedditSearchEndpoint + queryFormatted, parameters: nil, type: "GET") { (result) in
+                if let data = result["data"] as? [String:Any]{
+                    if let children = data["children"] as? [[String:Any]]{
+                        self.sidebarData = children
+                        DispatchQueue.main.async {
+                            self.tableView.reloadData()
+                        }
+                    }
+                }
+            }
         }
     }
-    
-    
-    
 }
 
 extension ViewController: WKNavigationDelegate{

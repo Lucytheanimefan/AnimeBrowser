@@ -10,8 +10,8 @@ import Cocoa
 import os.log
 
 class Requester: NSObject {
-    static let Reddit:String = "http://www.reddit.com/r/anime"
-    static let RedditSearchEndpoint:String = "/search.json?q="
+    static let Reddit:String = "http://www.reddit.com"
+    static let RedditSearchEndpoint:String = "/r/anime/search.json?q="
     static let ANN:String = "https://www.animenewsnetwork.com"
     static let reportsEndpoint:String = "/encyclopedia/reports.xml?id="
     static let recentlyAddedAnimeID:String = "148"
@@ -89,14 +89,17 @@ extension Requester:XMLParserDelegate{
     
     func parser(_ parser: XMLParser, foundCharacters string: String) {
         //print(string)
-        if (xmlElementName == "anime" || xmlElementName == "manga" || xmlElementName == "company" || xmlElementName == "nb_votes" || xmlElementName == "bayesian_average" || xmlElementName == "date_added")
-        {
+        //if (xmlElementName == "anime" || xmlElementName == "manga" || xmlElementName == "company" || xmlElementName == "nb_votes" || xmlElementName == "bayesian_average" || xmlElementName == "date_added")
+        //{
+            if (xmlElementName == "anime" || xmlElementName == "manga" || xmlElementName == "company"){
+                xmlElementName = "title"
+            }
             if (xmlChunk[xmlElementName] == nil){
                 xmlChunk[xmlElementName] = ""
             }
 
             xmlChunk[xmlElementName] = xmlChunk[xmlElementName] as! String + string
-        }
+        //}
     }
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
