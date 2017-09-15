@@ -103,6 +103,8 @@ class WindowController: NSWindowController {
                         if let data = results as? [NSDictionary]
                         {
                             self.malAnimeEntries = data
+                            CFPreferencesSetValue("malEntries" as CFString, data as CFPropertyList, "com.lucy.anime" as CFString, kCFPreferencesCurrentUser, kCFPreferencesAnyHost)
+                            CFPreferencesSynchronize("com.lucy.anime" as CFString, kCFPreferencesCurrentUser, kCFPreferencesAnyHost)
                             DispatchQueue.main.async {
                                 vc.tableView.reloadData()
                             }

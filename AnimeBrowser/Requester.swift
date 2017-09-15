@@ -68,7 +68,6 @@ class Requester: NSObject {
             }
             else{
                 do{
-                    print(data)
                     let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments)
                         //print(json)
                     print(type(of:json))

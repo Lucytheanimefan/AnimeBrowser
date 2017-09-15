@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnimeBrowser/WindowController.swift"
-            timestampString = "527134693.133442"
+            timestampString = "527135848.404057"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "openURL(url:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnimeBrowser/WindowController.swift"
-            timestampString = "527134693.133442"
+            timestampString = "527135848.404057"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "openURL(url:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,13 +74,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnimeBrowser/WindowController.swift"
-            timestampString = "527134693.133442"
+            timestampString = "527135934.976632"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "110"
             endingLineNumber = "110"
             landmarkName = "sideBarSelection(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AnimeBrowser.WindowController.(sideBarSelection (__ObjC.NSPopUpButton) -&gt; ()).(closure #1)"
+                  moduleName = "AnimeBrowser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucyzhang/Github/AnimeBrowser/AnimeBrowser/WindowController.swift"
+                  timestampString = "527135948.329707"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
+                  offsetFromSymbolStart = "1143">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AnimeBrowser.WindowController.(sideBarSelection (__ObjC.NSPopUpButton) -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "AnimeBrowser"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lucyzhang/Github/AnimeBrowser/AnimeBrowser/WindowController.swift"
+                  timestampString = "527135948.332369"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "110"
+                  endingLineNumber = "110"
+                  offsetFromSymbolStart = "147">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -90,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnimeBrowser/WindowController.swift"
-            timestampString = "527134693.133442"
+            timestampString = "527135937.357531"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "sideBarSelection(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -105,204 +137,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AnimeBrowser/Requester.swift"
-            timestampString = "527133902.245168"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "makeGeneralRequest(url:parameters:type:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AnimeBrowser/Requester.swift"
-            timestampString = "527134015.797806"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "makeGeneralRequest(url:parameters:type:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AnimeBrowser/Requester.swift"
-            timestampString = "527133572.885498"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "makeGeneralRequest(url:parameters:type:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AnimeBrowser/Requester.swift"
-            timestampString = "527133572.885498"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "makeGeneralRequest(url:parameters:type:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AnimeBrowser/Requester.swift"
-            timestampString = "527134015.797806"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "makeGeneralRequest(url:parameters:type:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AnimeBrowser.Requester.(makeGeneralRequest (url : Swift.String, parameters : Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, type : Swift.String, completion : (Any) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "AnimeBrowser"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lucyzhang/Github/AnimeBrowser/AnimeBrowser/Requester.swift"
-                  timestampString = "527134694.637798"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "78"
-                  endingLineNumber = "78"
-                  offsetFromSymbolStart = "2329">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AnimeBrowser.Requester.(makeGeneralRequest (url : Swift.String, parameters : Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, type : Swift.String, completion : (Any) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "AnimeBrowser"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lucyzhang/Github/AnimeBrowser/AnimeBrowser/Requester.swift"
-                  timestampString = "527134694.639519"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "78"
-                  endingLineNumber = "78"
-                  offsetFromSymbolStart = "2761">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AnimeBrowser/Requester.swift"
-            timestampString = "527134015.797806"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "makeGeneralRequest(url:parameters:type:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AnimeBrowser.Requester.(makeGeneralRequest (url : Swift.String, parameters : Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, type : Swift.String, completion : (Any) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "AnimeBrowser"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lucyzhang/Github/AnimeBrowser/AnimeBrowser/Requester.swift"
-                  timestampString = "527134694.643961"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "78"
-                  endingLineNumber = "78"
-                  offsetFromSymbolStart = "2329">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "AnimeBrowser.Requester.(makeGeneralRequest (url : Swift.String, parameters : Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, type : Swift.String, completion : (Any) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "AnimeBrowser"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/lucyzhang/Github/AnimeBrowser/AnimeBrowser/Requester.swift"
-                  timestampString = "527134694.645679"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "78"
-                  endingLineNumber = "78"
-                  offsetFromSymbolStart = "2761">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AnimeBrowser/Requester.swift"
-            timestampString = "527134015.797806"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "makeGeneralRequest(url:parameters:type:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AnimeBrowser/Requester.swift"
-            timestampString = "527133986.456394"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "makeGeneralRequest(url:parameters:type:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "AnimeBrowser/WindowController.swift"
-            timestampString = "527134663.796734"
+            timestampString = "527135939.683873"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "sideBarSelection(_:)"
             landmarkType = "7">
          </BreakpointContent>
