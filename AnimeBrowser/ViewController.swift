@@ -224,12 +224,14 @@ extension ViewController:NSTableViewDelegate{
         // Reddit!
         if let query = dict["title"] as? String{
             let queryFormatted = query.replacingOccurrences(of: " ", with: "+")
-            requester.makeGeneralRequest(url: Requester.Reddit + Requester.RedditSearchEndpoint + queryFormatted, parameters: nil, type: "GET") { (result) in
-                if let data = result["data"] as? [String:Any]{
-                    if let children = data["children"] as? [[String:Any]]{
-                        self.sidebarData = children
-                        DispatchQueue.main.async {
-                            self.tableView.reloadData()
+            requester.makeGeneralRequest(url: Requester.Reddit + Requester.RedditSearchEndpoint + queryFormatted, parameters: nil, type: "GET") { (results) in
+                if let result = results as? [String:Any]{
+                    if let data = result["data"] as? [String:Any]{
+                        if let children = data["children"] as? [[String:Any]]{
+                            self.sidebarData = children
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
                         }
                     }
                 }

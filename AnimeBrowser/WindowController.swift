@@ -96,10 +96,25 @@ class WindowController: NSWindowController {
         let id = sender.selectedItem?.identifier
         if (id == "malMenuIdentifier"){
             if let vc = self.window?.contentViewController as? ViewController{
-                vc.sidebarData = malAnimeEntries as! [[String : Any]]
-                UserDefaults.standard.set(malAnimeEntries, forKey: "sidebarData")
-                DispatchQueue.main.async {
-                    vc.tableView.reloadData()
+                if (malAnimeEntries == nil){
+                    //TODO: username!, sync with CFPreferences?
+                    requester.makeGeneralRequest(url: Requester.MALEndpoint, parameters: nil, type: "GET", completion: { (results) in
+                        print(results)
+                        if let data = results as? [NSDictionary]
+                        {
+                            self.malAnimeEntries = data
+                            DispatchQueue.main.async {
+                                vc.tableView.reloadData()
+                            }
+                        }
+                        
+                    })
+                } else{
+                    vc.sidebarData = malAnimeEntries as! [[String : Any]]
+                    UserDefaults.standard.set(malAnimeEntries, forKey: "sidebarData")
+                    DispatchQueue.main.async {
+                        vc.tableView.reloadData()
+                    }
                 }
             }
         }else{

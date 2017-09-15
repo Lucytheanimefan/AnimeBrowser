@@ -10,6 +10,8 @@ import Cocoa
 import os.log
 
 class Requester: NSObject {
+    static let AnimeServer:String = "https://lucys-anime-server.herokuapp.com"
+    static let MALEndpoint:String = "https://lucys-anime-server.herokuapp.com/myanimelist?username=Silent_Muse"//"https://www.myanimelist.net/animelist/Silent_Muse/load.json" // TODO: don't hard code
     static let Reddit:String = "http://www.reddit.com"
     static let RedditSearchEndpoint:String = "/r/anime/search.json?q="
     static let ANN:String = "https://www.animenewsnetwork.com"
@@ -50,21 +52,28 @@ class Requester: NSObject {
             }.resume()
     }
     
-    func makeGeneralRequest(url:String, parameters:[String:Any]?, type:String, completion:@escaping ((_ data:[String:Any])->Void)){
+    func makeGeneralRequest(url:String, parameters:[String:Any]?, type:String, completion:@escaping ((_ data:/*[String:Any]*/Any)->Void)){
+        print(url)
         var request = URLRequest(url: URL(string: url)!)
         request.httpMethod = type
         let session = URLSession.shared
         
 
         session.dataTask(with: request) {data, response, err in
+            let response = response as? HTTPURLResponse
+            print(response?.description)
             if (err != nil){
                 print("Error with request :(")
                 print(err!.localizedDescription)
             }
             else{
                 do{
-                    let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments) as! [String : Any]
+                    print(data)
+                    let json = try JSONSerialization.jsonObject(with: data!, options:.allowFragments)
+                        //print(json)
+                    print(type(of:json))
                     completion(json)
+
                     
                 }catch let error as NSError{
                     print(error)
