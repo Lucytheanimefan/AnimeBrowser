@@ -87,6 +87,7 @@ class ViewController: NSViewController {
     }
     
     func setTotoroGIF(){
+        totoroTextView.alignment = NSTextAlignment.center
         totoroTextView.string = "Watch anime"
         totoroImageView.animates = true
         let advTimeGif = NSImage(data: self.totoroImageData!)
@@ -223,7 +224,8 @@ extension ViewController:NSTableViewDelegate{
         // Find entries relevant to searched
         // Reddit!
         if let query = dict["title"] as? String{
-            let queryFormatted = query.replacingOccurrences(of: " ", with: "+")
+            let queryFormatted = removeSpecialCharsFromString(text: query).replacingOccurrences(of: " ", with: "+")
+            
             requester.makeGeneralRequest(url: Requester.Reddit + Requester.RedditSearchEndpoint + queryFormatted, parameters: nil, type: "GET") { (results) in
                 if let result = results as? [String:Any]{
                     if let data = result["data"] as? [String:Any]{
@@ -240,13 +242,21 @@ extension ViewController:NSTableViewDelegate{
             }
         }
     }
+    
+    func removeSpecialCharsFromString(text: String) -> String {
+        let okayChars : Set<Character> =
+            Set("abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLKMNOPQRSTUVWXYZ1234567890+-=_".characters)
+        return String(text.characters.filter {okayChars.contains($0) })
+    }
 }
 
 extension ViewController: WKNavigationDelegate{
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        (NSApp.mainWindow?.windowController as! WindowController).urlBackQueue.append(webView.url!)
-        (NSApp.mainWindow?.windowController as! WindowController).urlField.stringValue = webView.url!.absoluteString
+        if let wc = NSApp.mainWindow?.windowController as? WindowController{
+            wc.urlBackQueue.append(webView.url!)
+            wc.urlField.stringValue = webView.url!.absoluteString
+        }
     }
     
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
@@ -262,7 +272,8 @@ extension ViewController: WKNavigationDelegate{
         totoroImageView.image = gif
         totoroTextView.string = "Loaded! Time to watch anime!"
     }
-    
 }
+
+
 
 
