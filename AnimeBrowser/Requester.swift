@@ -64,7 +64,7 @@ class Requester: NSObject {
             print(response?.description)
             if (err != nil){
                 print("Error with request :(")
-                print(err!.localizedDescription)
+                completion(["title":err!.localizedDescription])
             }
             else{
                 do{

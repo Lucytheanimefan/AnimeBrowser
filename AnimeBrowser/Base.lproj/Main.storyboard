@@ -665,7 +665,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" customClass="WindowController" customModule="AnimeBrowser" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -697,11 +697,11 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <customView id="UA6-dp-OWA">
-                    <rect key="frame" x="0.0" y="0.0" width="815" height="76"/>
+                    <rect key="frame" x="0.0" y="0.0" width="1215" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lPV-lG-zBk">
-                            <rect key="frame" x="69" y="52" width="25" height="25"/>
+                            <rect key="frame" x="61" y="2" width="25" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSLeftFacingTriangleTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hy3-IL-jTb">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -712,7 +712,7 @@
                             </connections>
                         </button>
                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9x8-hL-nBi">
-                            <rect key="frame" x="9" y="52" width="37" height="25"/>
+                            <rect key="frame" x="9" y="2" width="37" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSBookmarksTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VUI-Qb-kah">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -723,7 +723,7 @@
                             </connections>
                         </button>
                         <button identifier="CrunchyRoll" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HIf-Vk-haD">
-                            <rect key="frame" x="665" y="51" width="21" height="25"/>
+                            <rect key="frame" x="607" y="2" width="21" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="CrunchyRoll" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="n9e-rO-JBe">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -734,7 +734,7 @@
                             </connections>
                         </button>
                         <button identifier="Funimation" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nOe-8Y-W61">
-                            <rect key="frame" x="686" y="51" width="21" height="25"/>
+                            <rect key="frame" x="631" y="2" width="21" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="Funimation" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="BEj-CL-YUN">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -745,7 +745,7 @@
                             </connections>
                         </button>
                         <button identifier="ANN" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mHk-oq-V8t">
-                            <rect key="frame" x="707" y="51" width="21" height="25"/>
+                            <rect key="frame" x="652" y="2" width="21" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="ANN" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="DoA-1D-DsH">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -756,7 +756,7 @@
                             </connections>
                         </button>
                         <button identifier="MAL" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wLZ-3P-sL1">
-                            <rect key="frame" x="727" y="52" width="21" height="25"/>
+                            <rect key="frame" x="672" y="2" width="21" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="MAL" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="ub3-qc-fgD">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -767,7 +767,7 @@
                             </connections>
                         </button>
                         <button identifier="Reddit" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YJH-3h-sHi">
-                            <rect key="frame" x="748" y="51" width="21" height="25"/>
+                            <rect key="frame" x="693" y="2" width="21" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="Reddit" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="tDu-9L-j10">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -778,7 +778,7 @@
                             </connections>
                         </button>
                         <button identifier="AnimeMaru" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dqz-wq-LqO">
-                            <rect key="frame" x="769" y="51" width="21" height="25"/>
+                            <rect key="frame" x="714" y="2" width="21" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="AnimeMaru" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="538-Tt-dWy">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -788,8 +788,31 @@
                                 <action selector="openAnimeSite:" target="B8D-0N-5wS" id="gjj-co-fty"/>
                             </connections>
                         </button>
+                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yhe-Cm-72O">
+                            <rect key="frame" x="87" y="2" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSRightFacingTriangleTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="AWz-Ny-kkq">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="goForward:" target="B8D-0N-5wS" id="Zw8-Il-oSz"/>
+                            </connections>
+                        </button>
+                        <searchField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dz2-g0-EWZ">
+                            <rect key="frame" x="128" y="4" width="471" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="pWP-HR-ef6">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </searchFieldCell>
+                            <connections>
+                                <action selector="submitURLString:" target="B8D-0N-5wS" id="jYf-Ps-sQ2"/>
+                            </connections>
+                        </searchField>
                         <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HQO-5G-zeA">
-                            <rect key="frame" x="7" y="24" width="177" height="26"/>
+                            <rect key="frame" x="741" y="2" width="177" height="26"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <popUpButtonCell key="cell" type="push" title="Recently added anime" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Kt1-11-gqt" id="D4Q-Su-Njo">
                                 <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -814,29 +837,6 @@
                                 <action selector="sideBarSelection:" target="B8D-0N-5wS" id="QQJ-lf-1uS"/>
                             </connections>
                         </popUpButton>
-                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yhe-Cm-72O">
-                            <rect key="frame" x="95" y="52" width="25" height="25"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSRightFacingTriangleTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="AWz-Ny-kkq">
-                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                <font key="font" metaFont="system"/>
-                            </buttonCell>
-                            <connections>
-                                <action selector="goForward:" target="B8D-0N-5wS" id="Zw8-Il-oSz"/>
-                            </connections>
-                        </button>
-                        <searchField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dz2-g0-EWZ">
-                            <rect key="frame" x="176" y="54" width="471" height="22"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="pWP-HR-ef6">
-                                <font key="font" metaFont="system"/>
-                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                            </searchFieldCell>
-                            <connections>
-                                <action selector="submitURLString:" target="B8D-0N-5wS" id="jYf-Ps-sQ2"/>
-                            </connections>
-                        </searchField>
                     </subviews>
                 </customView>
             </objects>
@@ -964,7 +964,7 @@
                                                                     </subviews>
                                                                 </clipView>
                                                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="MAU-1a-Rr2">
-                                                                    <rect key="frame" x="1" y="387" width="163" height="16"/>
+                                                                    <rect key="frame" x="1" y="367" width="163" height="16"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                 </scroller>
                                                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="U6t-Ok-2US">

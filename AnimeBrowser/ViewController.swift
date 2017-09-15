@@ -228,9 +228,11 @@ extension ViewController:NSTableViewDelegate{
                 if let result = results as? [String:Any]{
                     if let data = result["data"] as? [String:Any]{
                         if let children = data["children"] as? [[String:Any]]{
-                            self.sidebarData = children
-                            DispatchQueue.main.async {
-                                self.tableView.reloadData()
+                            if (children.count > 0){
+                                self.sidebarData = children
+                                DispatchQueue.main.async {
+                                    self.tableView.reloadData()
+                                }
                             }
                         }
                     }

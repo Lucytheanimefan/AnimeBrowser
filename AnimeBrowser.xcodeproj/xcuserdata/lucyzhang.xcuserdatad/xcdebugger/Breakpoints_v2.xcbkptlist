@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnimeBrowser/WindowController.swift"
-            timestampString = "527135848.404057"
+            timestampString = "527165460.507447"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "openURL(url:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnimeBrowser/WindowController.swift"
-            timestampString = "527135848.404057"
+            timestampString = "527165460.507447"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
             landmarkName = "openURL(url:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,27 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnimeBrowser/WindowController.swift"
-            timestampString = "526877823.613528"
+            timestampString = "527165460.507447"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "submitURLString(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AnimeBrowser/WindowController.swift"
-            timestampString = "527131623.459028"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "sideBarSelection(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnimeBrowser/WindowController.swift"
-            timestampString = "527135934.976632"
+            timestampString = "527165460.507447"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "sideBarSelection(_:)"
             landmarkType = "7">
             <Locations>
@@ -90,11 +74,11 @@
                   moduleName = "AnimeBrowser"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lucyzhang/Github/AnimeBrowser/AnimeBrowser/WindowController.swift"
-                  timestampString = "527135948.329707"
+                  timestampString = "527165606.958202"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "110"
-                  endingLineNumber = "110"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
                   offsetFromSymbolStart = "1143">
                </Location>
                <Location
@@ -105,11 +89,11 @@
                   moduleName = "AnimeBrowser"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/lucyzhang/Github/AnimeBrowser/AnimeBrowser/WindowController.swift"
-                  timestampString = "527135948.332369"
+                  timestampString = "527165606.960518"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "110"
-                  endingLineNumber = "110"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
                   offsetFromSymbolStart = "147">
                </Location>
             </Locations>
@@ -122,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnimeBrowser/WindowController.swift"
-            timestampString = "527135937.357531"
+            timestampString = "527165460.507447"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "sideBarSelection(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -138,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnimeBrowser/WindowController.swift"
-            timestampString = "527135939.683873"
+            timestampString = "527165460.507447"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "sideBarSelection(_:)"
             landmarkType = "7">
          </BreakpointContent>

@@ -56,6 +56,8 @@ class WindowController: NSWindowController {
         self.toolBar.allowsUserCustomization = true
         self.toolBar.autosavesConfiguration = true
         self.toolBar.displayMode = .iconOnly
+        
+        self.window?.titleVisibility = .hidden
     }
     
     @IBAction func submitURLString(_ sender: NSTextField) {
