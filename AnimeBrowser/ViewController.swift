@@ -272,6 +272,8 @@ extension ViewController: WKNavigationDelegate{
         totoroImageView.image = gif
         totoroTextView.string = "Loaded! Time to watch anime!"
     }
+    
+    
 }
 
 
